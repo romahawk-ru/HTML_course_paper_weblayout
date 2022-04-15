@@ -23,12 +23,17 @@
   <link rel="preload" href="fonts/muller-regularitalic.woff2" as="font">
 
   <!-- css -->
+  <!-- Include Choices CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/media.css">
 
-  <!-- js -->
 
+
+  <!-- js -->
+  <!-- Include Choices JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
 </head>
 <body>
   
@@ -584,17 +589,17 @@
   </section>
 
   <section class="transfers">
-    <div class="container">
+    <div class="container transfers__container">
       <div class="transfers__left">
         <div class="transfers-left__top">
           <h2 class="title transfers__title">Передачи</h2>
           <div class="transfers-select__inner">
             <label for="select" class="transfers-select__label">Автор:</label>
-            <select name="select" class="transfers__select" id="default">
-              <option>Дмитрий Гутенберг</option>
-              <option>Татьяна Флеганова</option>
-              <option>Анна Васильева</option>
-              <option>Пётр Дмитриевский</option>
+            <select name="select" class="default" id="default">
+              <option  value="Дмитрий Гутенберг">Дмитрий Гутенберг</option>
+              <option value="Татьяна Флеганова">Татьяна Флеганова</option>
+              <option value="Анна Васильева">Анна Васильева</option>
+              <option value="Пётр Дмитриевский">Пётр Дмитриевский</option>
             </select>
           </div>
         </div>
@@ -613,6 +618,97 @@
           <span class="transfers-left-bottom__describe">В архив попадают все передачи, которые вы пропустили! Enjoy :)</span>
         </div>
       </div>
+      <div class="transfers__right">
+        <ul class="transfers__list">
+          <li class="transfers-list__item">
+            <img src="img/transfers-item-img-1.jpg" alt="transfers image" class="transfers-item-img">
+            <h3 class="transfers-item__title">О людях и книгах</h3>
+            <span class="transfers-item__description">Анонсируется отдельно</span>
+            <a href="#" class="transfers-item__link">
+              Подробнее
+              <span class="transfers-item-link__icon">
+                <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+                </svg>                  
+              </span>
+            </a>
+          </li>
+          <li class="transfers-list__item">
+            <img src="img/transfers-item-img-2.jpg" alt="transfers image" class="transfers-item-img">
+            <h3 class="transfers-item__title">Графомания td.</h3>
+            <span class="transfers-item__description">По понедельникам в 10:00 </span>
+            <a href="#" class="transfers-item__link">
+              Подробнее
+              <span class="transfers-item-link__icon">
+                <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+                </svg>                  
+              </span>
+            </a>
+          </li>
+          <li class="transfers-list__item">
+            <img src="img/transfers-item-img-3.jpg" alt="transfers image" class="transfers-item-img">
+            <h3 class="transfers-item__title">Не Рим, не Троя</h3>
+            <span class="transfers-item__description">По вторникам в 12:00</span>
+            <a href="#" class="transfers-item__link">
+              Подробнее
+              <span class="transfers-item-link__icon">
+                <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+                </svg>                  
+              </span>
+            </a>
+          </li>
+          <li class="transfers-list__item">
+            <img src="img/transfers-item-img-4.jpg" alt="transfers image" class="transfers-item-img">
+            <h3 class="transfers-item__title">Эрудит</h3>
+            <span class="transfers-item__description">По пятницам в 17:00</span>
+            <a href="#" class="transfers-item__link">
+              Подробнее
+              <span class="transfers-item-link__icon">
+                <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+                </svg>                  
+              </span>
+            </a>
+          </li>
+          <li class="transfers-list__item">
+            <img src="img/transfers-item-img-5.jpg" alt="transfers image" class="transfers-item-img">
+            <h3 class="transfers-item__title">Тонкости эпох</h3>
+            <span class="transfers-item__description">По субботам в 10:00</span>
+            <a href="#" class="transfers-item__link">
+              Подробнее
+              <span class="transfers-item-link__icon">
+                <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+                </svg>                  
+              </span>
+            </a>
+          </li>
+          <li class="transfers-list__item">
+            <img src="img/transfers-item-img-6.jpg" alt="transfers image" class="transfers-item-img">
+            <h3 class="transfers-item__title">Живые мысли</h3>
+            <span class="transfers-item__description">По воскресеньям в 15:30</span>
+            <a href="#" class="transfers-item__link">
+              Подробнее
+              <span class="transfers-item-link__icon">
+                <svg width="28" height="12" viewBox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M24.3536 6.35355C24.5488 6.15829 24.5488 5.84171 24.3536 5.64645L21.1716 2.46447C20.9763 2.2692 20.6597 2.2692 20.4645 2.46447C20.2692 2.65973 20.2692 2.97631 20.4645 3.17157L23.2929 6L20.4645 8.82843C20.2692 9.02369 20.2692 9.34027 20.4645 9.53553C20.6597 9.7308 20.9763 9.7308 21.1716 9.53553L24.3536 6.35355ZM4 6.5H24V5.5H4V6.5Z" fill="#121723"/>
+                </svg>                  
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="guests">
+    <div class="container">
+      <h2 class="title guests__title">Гости</h2>
+      <h3 class="guests__subtitle">У нас бывают:</h3>
+      <p class="guests__text">Блогеры, арт-критики и деятели искусства, музыканты, молодые учёные и люди науки, историки, филологи и много других интересных гостей!</p>
+
     </div>
   </section>
 
