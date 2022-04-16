@@ -175,9 +175,26 @@ ul, li {
   margin-right: 24px;
   width: 24px;
   height: 24px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 20px 20px;
+  outline: none;
+}
+
+.header-search__btn svg path {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.header-search__btn:hover svg path {
+  stroke: var(--color-primary-light);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.header-search__btn:focus svg path {
+  stroke: var(--color-primary-light);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.header-search__btn:active svg path {
+  stroke: var(--color-primary-shade);
+  transition: stroke 0.3s ease-in-out;
 }
 
 .header-login__btn {
@@ -187,6 +204,28 @@ ul, li {
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
+  color: var(--color-black);
+  outline: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.header-login__btn:hover {
+  color: var(--color-white);
+  background-color: var(--color-black);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.header-login__btn:focus {
+  color: var(--color-black);
+  background-color: var(--color-primary-light);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.header-login__btn:active {
+  color: var(--color-white);
+  border-color: var(--color-primary-shade);
+  background-color: var(--color-primary-shade);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .header__bottom {
@@ -490,18 +529,13 @@ ul, li {
   outline: none;
 }
 
-/* .podcasts-list-item-inner__btn svg path {
+.podcasts-list-item-inner__btn svg path {
   transition: fill 0.3s ease-in-out;
 }
 
 .podcasts-list-item-inner__btn svg circle {
-  transition: stroke 0.3s ease-in-out;
+  transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
-
-.podcasts-list-item-inner__btn svg {
-  transition: fill 0.3s ease-in-out;
-}
-
 
 .podcasts-list-item-inner__btn:hover svg path {
   fill: var(--color-primary);
@@ -524,19 +558,15 @@ ul, li {
 }
 
 .podcasts-list-item-inner__btn:active svg circle {
+  fill: var(--color-primary-shade);
   stroke: var(--color-primary-shade);
-  transition: stroke 0.3s ease-in-out;
+  transition: fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
 }
 
 .podcasts-list-item-inner__btn:active svg path {
   fill: var(--color-white);
   transition: fill 0.3s ease-in-out;
 }
-
-.podcasts-list-item-inner__btn:active svg {
-  fill: var(--color-primary-shade);
-  transition: fill 0.4s ease-in-out;
-} */
 
 
 
@@ -551,8 +581,35 @@ ul, li {
   margin-right: 30px;
 }
 
+.item-inner-bottom-list__item .item-inner-bottom-list-item__quantity {
+  transition: color 0.3s ease-in-out;
+}
+
+.item-inner-bottom-list__item svg path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.item-inner-bottom-list__item:hover .item-inner-bottom-list-item__quantity {
+  color: var(--color-primary);
+  transition: color 0.3s ease-in-out;
+}
+
+.item-inner-bottom-list__item:hover svg path {
+  fill: var(--color-primary);
+  transition: fill 0.3s ease-in-out;
+}
+
+.item-inner-bottom-list__item:focus svg path {
+  fill: var(--color-white);
+  transition: fill 0.3s ease-in-out;
+}
+
+
+
+
+
 .item-inner-bottom-list-item__quantity {
-  margin-left: 6px;
+  margin-left: 5px;
   color: var(--color-text-gray);
 }
 
@@ -834,13 +891,15 @@ ul, li {
 }
 
 .transfers-item__link {
+  display: flex;
+  align-items: center;
   font-style: italic;
   color: var(--color-black);
 }
 
 .transfers-item-link__icon {
   width: 28px;
-  height: 12px;
+  height: 15px;
 }
 
 /* section guests */
@@ -868,4 +927,50 @@ ul, li {
   font-size: 20px;
   line-height: 160%;
   color: var(--color-text-gray);
+}
+
+/* accordion start*/
+
+.accordion {
+  max-width: 730px;
+}
+
+.accordion__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 34px 0;
+  border-top: 1px solid var(--color-text-gray);
+  border-bottom: 1px solid var(--color-text-gray);
+}
+
+.accordion__item >.ui-icon {
+  display: none;
+}
+
+.accordion-item__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-white);
+}
+
+.accordion__list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.accordion-item__content {
+  padding: 30px 0;
+}
+
+.accordion-list-item__link {
+  color: var(--color-white);
+}
+
+.ui-accordion-header-active {
+  border-color: var(--color-primary-light);
 }

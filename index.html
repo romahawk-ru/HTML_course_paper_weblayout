@@ -33,7 +33,19 @@
 
   <!-- js -->
   <!-- Include Choices JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true,
+      heightStyle: "content",
+      animate: 300,
+      active: false,
+    });
+    } );
+  </script>
 </head>
 <body>
   
@@ -65,7 +77,12 @@
           </ul>
         </nav>
         <div class="header__btns">
-          <button class="header-search__btn btn-reset" style="background-image: url('./img/search-icon.svg');"></button>
+          <button class="header-search__btn btn-reset">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
           <a href="#" class="btn-reset header-login__btn">Вход</a>
         </div>
       </div>
@@ -229,7 +246,7 @@
                 </span>
               </div>
               <button class="podcasts-list-item-inner__btn btn-reset">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                   <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
                 </svg>                  
@@ -282,7 +299,7 @@
                 </span>
               </div>
               <button class="podcasts-list-item-inner__btn btn-reset">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                   <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
                 </svg>                  
@@ -335,7 +352,7 @@
                 </span>
               </div>
               <button class="podcasts-list-item-inner__btn btn-reset">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                   <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
                 </svg>                  
@@ -388,7 +405,7 @@
                 </span>
               </div>
               <button class="podcasts-list-item-inner__btn btn-reset">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                   <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
                 </svg>                  
@@ -441,7 +458,7 @@
                 </span>
               </div>
               <button class="podcasts-list-item-inner__btn btn-reset">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                   <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
                 </svg>                  
@@ -494,7 +511,7 @@
                 </span>
               </div>
               <button class="podcasts-list-item-inner__btn btn-reset">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                   <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
                 </svg>                  
@@ -547,7 +564,7 @@
                 </span>
               </div>
               <button class="podcasts-list-item-inner__btn btn-reset">
-                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                   <circle cx="24" cy="24" r="20" stroke="#A1A6B4" stroke-width="2"/>
                   <path d="M21.6924 31.7965L31.5716 24.7996C32.1428 24.3998 32.1428 23.6002 31.5716 23.2004L21.6924 16.2035C20.9943 15.7037 20 16.1835 20 17.0031V30.9969C20 31.8165 20.9943 32.2963 21.6924 31.7965Z" fill="#A1A6B4"/>
                 </svg>                  
@@ -708,7 +725,524 @@
       <h2 class="title guests__title">Гости</h2>
       <h3 class="guests__subtitle">У нас бывают:</h3>
       <p class="guests__text">Блогеры, арт-критики и деятели искусства, музыканты, молодые учёные и люди науки, историки, филологи и много других интересных гостей!</p>
-
+      <div class="accordion" id="accordion">
+        <div class="accordion__item">
+          <h3 class="accordion-item__title">Блогеры</h3>
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+            <path d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion-item__content">
+          <ul class="accordion__list">
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Сергей Денисов
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Евгений Войновский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Олег Свиридовский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Денис Тельман
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Матвей Мечников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Ольга Мартынова
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Владислав Кауперс
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Юрий Горин
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Константин Прусино
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Дмитрий Михалок
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Михаил Пожитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Максим Сергеев
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Иван Калитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Пётр Пиотровский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Георгий Полуян
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="accordion__item">
+          <h3 class="accordion-item__title">Арт-критики </h3>
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+            <path d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion-item__content">
+          <ul class="accordion__list">
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Сергей Денисов
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Евгений Войновский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Олег Свиридовский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Денис Тельман
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Матвей Мечников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Ольга Мартынова
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Владислав Кауперс
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Юрий Горин
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Константин Прусино
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Дмитрий Михалок
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Михаил Пожитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Максим Сергеев
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Иван Калитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Пётр Пиотровский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Георгий Полуян
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="accordion__item">
+          <h3 class="accordion-item__title">Художники</h3>
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+            <path d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion-item__content">
+          <ul class="accordion__list">
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Сергей Денисов
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Евгений Войновский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Олег Свиридовский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Денис Тельман
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Матвей Мечников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Ольга Мартынова
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Владислав Кауперс
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Юрий Горин
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Константин Прусино
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Дмитрий Михалок
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Михаил Пожитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Максим Сергеев
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Иван Калитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Пётр Пиотровский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Георгий Полуян
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="accordion__item">
+          <h3 class="accordion-item__title">Люди науки</h3>
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+            <path d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion-item__content">
+          <ul class="accordion__list">
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Сергей Денисов
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Евгений Войновский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Олег Свиридовский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Денис Тельман
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Матвей Мечников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Ольга Мартынова
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Владислав Кауперс
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Юрий Горин
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Константин Прусино
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Дмитрий Михалок
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Михаил Пожитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Максим Сергеев
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Иван Калитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Пётр Пиотровский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Георгий Полуян
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="accordion__item">
+          <h3 class="accordion-item__title">Историки</h3>
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+            <path d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion-item__content">
+          <ul class="accordion__list">
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Сергей Денисов
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Евгений Войновский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Олег Свиридовский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Денис Тельман
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Матвей Мечников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Ольга Мартынова
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Владислав Кауперс
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Юрий Горин
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Константин Прусино
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Дмитрий Михалок
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Михаил Пожитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Максим Сергеев
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Иван Калитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Пётр Пиотровский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Георгий Полуян
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="accordion__item">
+          <h3 class="accordion-item__title">Филологи</h3>
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="21" cy="21" r="20" stroke="#A1A6B4" stroke-width="2"/>
+            <path d="M13 24L21 16L29 24" stroke="#A1A6B4" stroke-width="2" stroke-linecap="square"/>
+          </svg> 
+        </div>
+        <div class="accordion-item__content">
+          <ul class="accordion__list">
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Сергей Денисов
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Евгений Войновский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Олег Свиридовский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Денис Тельман
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Матвей Мечников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Ольга Мартынова
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Владислав Кауперс
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Юрий Горин
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Константин Прусино
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Дмитрий Михалок
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Михаил Пожитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Максим Сергеев
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Иван Калитников
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Пётр Пиотровский
+              </a>
+            </li>
+            <li class="accordion-list__item">
+              <a href="#" class="accordion-list-item__link">
+                Георгий Полуян
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
