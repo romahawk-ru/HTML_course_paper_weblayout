@@ -1013,6 +1013,7 @@ ul, li {
   border-color: var(--color-primary-light);
 }
 
+/* acordion item effects */
 .ui-accordion-header-active svg {
   transform: rotate(180deg);
 }
@@ -1064,7 +1065,6 @@ ul, li {
   transition: stroke 0.3s ease-in-out;
 }
 
-
 .accordion__item:active .accordion-item__title {
   color: var(--color-primary-light);
   transition: color 0.3s ease-in-out;
@@ -1080,6 +1080,8 @@ ul, li {
   fill: var(--color-primary-light);
   transition: stroke 0.3s ease-in-out, fill 0.3s ease-in-out;
 }
+/* end acordion item effects */
+
 
 .guests__card {
   max-width: 350px;
@@ -1103,7 +1105,29 @@ ul, li {
 .guests-card-social-list-item__link {
   width: 24px;
   height: 24px;
+  outline: none;
 }
+
+/* social link effects */
+.guests-card-social-list-item__link svg path {
+  transition: fill 0.3s ease-in-out;
+}
+
+.guests-card-social-list-item__link:hover svg path {
+  fill: var(--color-primary);
+  transition: fill 0.3s ease-in-out;
+}
+
+.guests-card-social-list-item__link:focus svg path {
+  fill: var(--color-primary-light);
+  transition: fill 0.3s ease-in-out;
+}
+
+.guests-card-social-list-item__link:active svg path {
+  fill: var(--color-primary-shade);
+  transition: fill 0.3s ease-in-out;
+}
+/* end social link effects */
 
 .guests-card__title {
   margin: 0 0 8px 0;
@@ -1128,21 +1152,29 @@ ul, li {
   line-height: 16px;
   color: var(--color-primary-light);
   outline: none;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
+
+/*link effects */
 
 .guests-card__link:hover {
   color: var(--color-white);
   background-color: var(--color-primary-light);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .guests-card__link:focus {
   color: var(--color-white);
   border-color: var(--color-primary);
   background-color: var(--color-primary);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
 
 .guests-card__link:active {
   color: var(--color-white);
   border-color: var(--color-primary-shade);
   background-color: var(--color-primary-shade);
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;
 }
+
+/* end link effects */ 
