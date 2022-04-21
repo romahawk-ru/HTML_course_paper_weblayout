@@ -454,7 +454,7 @@ ul, li {
   align-items: center;
   justify-content: flex-start;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .podcasts-list__item {
@@ -468,6 +468,10 @@ ul, li {
 
 .podcasts-list__item:not(:nth-child(2n)) {
   margin-right: 30px;
+}
+
+.podcasts-list__item:nth-last-child(-n+2) {
+  margin-bottom: 0;
 }
 
 /*.podcasts__prew {
@@ -674,7 +678,7 @@ ul, li {
 /* section transfers */
 
 .transfers {
-  padding: 94px 0 64px 0;
+  padding: 94px 0;
 }
 
 .transfers__container {
@@ -868,7 +872,6 @@ ul, li {
 }
 
 .transfers-left-bottom__describe {
-  margin-bottom: 30px;
   line-height: 150%;
   color: var(--color-text-gray);
 }
@@ -893,6 +896,10 @@ ul, li {
 
 .transfers-list__item:not(:nth-child(3n)) {
   margin-right: 30px;
+}
+
+.transfers-list__item:nth-last-child(-n+3) {
+  margin-bottom: 0;
 }
 
 .transfers-item-img {
@@ -1293,3 +1300,57 @@ ul, li {
   padding-top: 14px;
 }
 
+.playlists__list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.playlists-list__item {
+  margin-bottom: 30px;
+  width: 160px;
+}
+
+.playlists-list__item:not(:nth-child(4n)) {
+  margin-right: 30px;
+}
+
+.playlists-list__item:nth-last-child(-n+4) {
+  margin-bottom: 0;
+}
+
+.playlists-list-item__top {
+  position: relative;
+  height: 160px;
+}
+
+.playlists-list-item__bottom {
+  padding: 16px 5px 16px 16px;
+  border: 1px solid var(--color-light-color);
+
+}
+
+.playlists-list-item__title {
+  margin: 0 0 4px 0;
+  font-weight: 500;
+  color: var(--color-black);
+}
+
+.playlists-list-item__text {
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--color-text-gray);
+}
+
+.playlists-list-item-top__lang {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  width: 24px;
+  height: 20px;
+  background-color: var(--color-black);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 12px;
+}
