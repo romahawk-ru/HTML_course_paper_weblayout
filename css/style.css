@@ -1534,13 +1534,125 @@ ul, li {
 }
 
 .about-form__textarea {
+  display: block;
+  margin-bottom: 30px;
   padding: 30px 32px;
   border: 1px solid var(--color-white);
   border-radius: 30px;
 }
 
 .about-form__input {
+  display: inline-block;
+  margin-bottom: 30px;
   padding: 25px 32px;
+  width: 445px;
   border: 1px solid var(--color-white);
   border-radius: 40px;
 }
+
+.input__box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn__form {
+  margin-bottom: 30px;
+  max-width: 212px;
+}
+
+.checkbox__form {
+  position: relative;
+  top: 0;
+}
+
+.checkbox__input-form {
+  position: absolute;
+  outline: none;
+  opacity: 0;
+}
+
+.checkbox__text {
+  position: relative;
+  padding-left: 24px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+.checkbox__text::before {
+  content: '';
+  position: absolute;
+  left: 0px;
+  top: -2px;
+  border: 1px solid var(--color-white);
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.checkbox__text::after {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0px;
+  width: 12px;
+  height: 12px;
+  background-image: url('../img/ok-img.svg');
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  opacity: 0;
+}
+
+.checkbox__input-form:checked + .checkbox__text::after {
+  opacity: 1;
+}
+
+.checkbox__input-form:focus-visible + .checkbox__text::before {
+  outline: 2px solid var(--color-white);
+  transition: outline 0.3s ease-in-out;
+}
+
+/* section footer */
+
+.footer {
+  padding-top: 94px;
+  background-color: var(--color-light-black);
+}
+
+.footer__container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.footer__social {
+  max-width: 160px;
+}
+
+.footer-social__list {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer-social__item:not(:last-child) {
+  margin-right: 21px;
+}
+
+.footer-nav__item {
+  margin-bottom: 20px;
+}
+
+.footer-nav__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: var(--color-white);
+}
+
+
