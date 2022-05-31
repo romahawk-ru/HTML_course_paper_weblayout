@@ -37,6 +37,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!--  Accordion init JavaScript -->
   <script>
     $( function() {
     $( "#accordion" ).accordion({
@@ -114,9 +115,15 @@
         </nav>
         <div class="header-bottom__player">
           <div class="header-bottom-player__track player-track__left">
-            <button class="player-trak__btn btn-reset">
-              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <audio id="sound1" src="/mp3/track.mp3" preload="auto"></audio>
+            <button class="player-trak__btn btn-reset" id="button-play">
+              <svg class="player-play" id="player-play" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
+              </svg>
+              <svg class="player-pause" id="player-pause" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/>
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
               </svg>
             </button>
             <div class="header-bottom__track">
@@ -129,9 +136,15 @@
             </div>
           </div>
           <div class="header-bottom-player__track player-track__right">
-            <button class="player-trak__btn btn-reset">
-              <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <audio id="sound2" src="/mp3/track2.mp3" preload="auto"></audio>
+            <button class="player-trak__btn btn-reset" id="button-play2">
+              <svg class="player-play" id="player-play2" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2ZM10 16.5V7.5L16 12L10 16.5Z" fill="#A1A6B4"/>
+              </svg>
+              <svg class="player-pause" id="player-pause2" width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.475 2 2 6.475 2 12C2 17.525 6.475 22 12 22C17.525 22 22 17.525 22 12C22 6.475 17.525 2 12 2Z" fill="#A1A6B4"/>
+                <rect x="9" y="8" width="2" height="8" rx="1" fill="white"/>
+                <rect x="13" y="8" width="2" height="8" rx="1" fill="white"/>
               </svg>
             </button>
             <div class="header-bottom__track">
@@ -638,12 +651,12 @@
       </div>
       <div class="transfers__right">
         <ul class="transfers__list">
-          <li class="transfers-list__item">
+          <li class="transfers-list__item" tabindex="0">
             <img src="img/transfers-item-img-1.jpg" alt="transfers image" class="transfers-item-img">
             <div class="transfers-list-item__bottom">
               <h3 class="transfers-item__title">О людях и книгах</h3>
               <span class="transfers-item__description">Анонсируется отдельно</span>
-              <a href="#" class="transfers-item__link">
+              <a href="#" class="transfers-item__link" tabindex="1">
                 Подробнее
                 <span class="transfers-item-link__icon">
                   <svg width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -653,12 +666,12 @@
               </a>
             </div>
           </li>
-          <li class="transfers-list__item">
+          <li class="transfers-list__item" tabindex="0">
             <img src="img/transfers-item-img-2.jpg" alt="transfers image" class="transfers-item-img">
             <div class="transfers-list-item__bottom">
               <h3 class="transfers-item__title">Графомания td.</h3>
               <span class="transfers-item__description">По понедельникам в 10:00 </span>
-              <a href="#" class="transfers-item__link">
+              <a href="#" class="transfers-item__link" tabindex="1">
                 Подробнее
                 <span class="transfers-item-link__icon">
                   <svg width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -668,12 +681,12 @@
               </a>
             </div>
           </li>
-          <li class="transfers-list__item">
+          <li class="transfers-list__item" tabindex="0">
             <img src="img/transfers-item-img-3.jpg" alt="transfers image" class="transfers-item-img">
             <div class="transfers-list-item__bottom">
               <h3 class="transfers-item__title">Не Рим, не Троя</h3>
               <span class="transfers-item__description">По вторникам в 12:00</span>
-              <a href="#" class="transfers-item__link">
+              <a href="#" class="transfers-item__link" tabindex="1">
                 Подробнее
                 <span class="transfers-item-link__icon">
                   <svg width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -683,12 +696,12 @@
               </a>
             </div>
           </li>
-          <li class="transfers-list__item">
+          <li class="transfers-list__item" tabindex="0">
             <img src="img/transfers-item-img-4.jpg" alt="transfers image" class="transfers-item-img">
             <div class="transfers-list-item__bottom">
               <h3 class="transfers-item__title">Эрудит</h3>
               <span class="transfers-item__description">По пятницам в 17:00</span>
-              <a href="#" class="transfers-item__link">
+              <a href="#" class="transfers-item__link" tabindex="1">
                 Подробнее
                 <span class="transfers-item-link__icon">
                   <svg width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -698,12 +711,12 @@
               </a>
             </div>
           </li>
-          <li class="transfers-list__item">
+          <li class="transfers-list__item" tabindex="0">
             <img src="img/transfers-item-img-5.jpg" alt="transfers image" class="transfers-item-img">
             <div class="transfers-list-item__bottom">
               <h3 class="transfers-item__title">Тонкости эпох</h3>
               <span class="transfers-item__description">По субботам в 10:00</span>
-              <a href="#" class="transfers-item__link">
+              <a href="#" class="transfers-item__link" tabindex="1">
                 Подробнее
                 <span class="transfers-item-link__icon">
                   <svg width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -713,12 +726,12 @@
               </a>
             </div>
           </li>
-          <li class="transfers-list__item">
+          <li class="transfers-list__item" tabindex="0">
             <img src="img/transfers-item-img-6.jpg" alt="transfers image" class="transfers-item-img">
             <div class="transfers-list-item__bottom">
               <h3 class="transfers-item__title">Живые мысли</h3>
               <span class="transfers-item__description">По воскресеньям в 15:30</span>
-              <a href="#" class="transfers-item__link">
+              <a href="#" class="transfers-item__link" tabindex="1">
                 Подробнее
                 <span class="transfers-item-link__icon">
                   <svg width="28" height="12" viewbox="0 0 28 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1515,7 +1528,26 @@
           Спешите приобрести!
         </p>
         <span class="radio-column-right__price">2800 руб</span>
-        <a href="#" class="radio-column-right__link" style="background-image: url(./img/market-icon.svg);">Купить на Яндекс.Маркет</a>
+        <a href="#" class="radio-column-right__link">
+          <svg width="21" height="20" viewbox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_13637_1514)">
+              <path
+                id="bg-circle"
+                d="M10.5 20C16.0228 20 20.5 15.5228 20.5 9.99998C20.5 4.47714 16.0228 0 10.5 0C4.97724 0 0.5 4.47714 0.5 9.99998C0.5 15.5228 4.97724 20 10.5 20Z"
+                fill="#F0D288"/>
+              <path
+                id="drawing-circle"
+                d="M17.4385 4.54415L13.7295 3.177L8.3957 10.8639L8.92677 7.37535L6.02058 5.68243L0.67395 12.1143C0.924269 13.3861 1.4102 14.5721 2.08387 15.6241L5.27373 11.7714L4.09993 16.2964L7.73707 17.6273L13.1408 9.84664L11.9569 14.296L14.9033 16.0181L20.558 10.3177C20.5592 10.2537 20.5599 10.1891 20.5599 10.1249C20.5599 8.78283 20.3017 7.50156 19.8329 6.32921L16.5482 9.65404L17.4385 4.54415Z"
+                fill="#121723"/>
+            </g>
+            <defs>
+              <clippath id="clip0_13637_1514">
+                <rect x="0.5" width="20" height="20" rx="10" fill="white"/>
+              </clippath>
+            </defs>
+          </svg>
+          <span class="radio-column-right-link__text">Купить на Яндекс.Маркет</span>
+        </a>
       </div>
     </div>
   </section>
