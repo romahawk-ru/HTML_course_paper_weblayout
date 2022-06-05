@@ -1,8 +1,15 @@
-// инициализация кастомного Select
-const element = document.querySelector('.default');
-const choices = new Choices (element, {
-  searchEnabled: false,
-  itemSelectText: ""
+// реализация поиска по сайту
+let searchBtn = document.getElementById('search-btn');
+let searchForm = document.getElementById('search__form');
+let searchFormCloseBtn = document.getElementById('search-form-close-btn');
+
+searchBtn.addEventListener('click', function() {
+    searchForm.classList.add('search-form__is-active');
+});
+
+searchFormCloseBtn.addEventListener('click', function(event) {
+    event.preventDefault();
+    searchForm.classList.remove('search-form__is-active');
 });
 
 
@@ -24,7 +31,12 @@ let secondPauseBtnIcon = document.getElementById('player-pause2');
 
 secondPlayerButton.addEventListener('click', () => secondPlayer.paused && firstPlayer.paused ? secondPlayer.play()+secondPlayBtnIcon.classList.add('player-is-non-active')+secondPauseBtnIcon.classList.add('player-is-active') : !firstPlayer.paused ? firstPlayer.pause()+pauseBtnIcon.classList.remove('player-is-active')+playBtnIcon.classList.remove('player-is-non-active') + secondPlayer.play()+secondPlayBtnIcon.classList.add('player-is-non-active')+secondPauseBtnIcon.classList.add('player-is-active') : secondPlayer.pause()+secondPlayBtnIcon.classList.remove('player-is-non-active')+secondPauseBtnIcon.classList.remove('player-is-active'));
 
-
+// инициализация кастомного Select
+const element = document.querySelector('.default');
+const choices = new Choices (element, {
+  searchEnabled: false,
+  itemSelectText: ""
+});
 
 
 
