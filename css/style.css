@@ -59,7 +59,9 @@
 :root {
   --color-white: #ffffff;
   --color-black: #121723;
+  --color-black-50: rgba(0, 0, 0, 0.5);
   --color-light-black: #292E39;
+  --color-light-black-10: rgba(230, 232, 236, 0.1);
   --color-text-gray: #A1A6B4;
   --color-primary-shade: #4F28A5;
   --color-primary: #6D31EE;
@@ -99,6 +101,9 @@ ul, li {
   cursor: pointer;
 }
 
+.site__container {
+  position: relative;
+}
 
 .container {
   margin: 0 auto;
@@ -108,6 +113,7 @@ ul, li {
 
 .title {
   margin: 0;
+  font-weight: 400;
   font-size: 48px;
   line-height: 100%;
   color: var(--color-black);
@@ -732,6 +738,9 @@ ul, li {
 
 /* interaction styles end */
 
+.hidden {
+  display: none;
+}
 
 .podcast__btn {
   display: block;
@@ -799,121 +808,98 @@ ul, li {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  width: 255px;
 }
 
 .transfers-select__label {
   margin-bottom: 8px;
 }
 
-/* кастомизация селекта*/
-
+/* castom select start */
 .choices {
-  width: 255px;
-  border-radius: 10px;
-  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
-}
-
-.choices.is-open {
-  background-color: var(--color-light-color);
-  border-radius: 10px;
+  width: 100%;
 }
 
 .choices[data-type*=select-one]:after {
-  height: 8px;
-  width: 8px;
   z-index: 3;
-  top: 40%;
-  border: 1px solid var(--color-text-gray);
-  border-width: 0 0 1px 1px;
-  transform: rotate(-45deg);
-}
-
-.choices[data-type*=select-one].is-open:after {
-  top: 60%;
-  border: 1px solid var(--color-shade-gray);
-  border-width: 1px 1px 0 0;
 }
 
 .choices__inner {
   position: relative;
-  padding: 12px 15px 12px 12px;
+  padding: 12px;
+  border-radius: 10px;
   border: 1px solid var(--color-light-color);
   background-color: var(--color-light-color);
-  border-radius: 10px;
   z-index: 2;
-  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.is-open .choices__inner {
+  border-radius: 10px;
+}
+
+.is-focused .choices__inner, .is-open .choices__inner {
+  border: 1px solid var(--color-primary);
+  transition: border 0.3s ease-in-out;
 }
 
 .choices__inner:hover {
+  border: 1px solid var(--color-light-color-40);
   background-color: var(--color-light-color-40);
-  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.is-focused {
-  margin: 0;
-  padding: 0;
-  border: 1px solid var(--color-primary);
-  border-radius: 10px;
-  background-color: var(--color-light-color);
-  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+.choices__inner:hover.choices__inner {
+  border: 1px solid transparent;
 }
 
-.choices.is-focused.is-open {
+.is-open .choices__inner:hover.choices__inner  {
   border: 1px solid var(--color-light-color);
+  background-color: var(--color-light-color);
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .choices__inner:active {
   border: 1px solid var(--color-shade-gray);
   background-color: var(--color-shade-gray);
-  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .choices[data-type*=select-one] .choices__inner {
   padding-bottom: 12px;
 }
 
-.is-open .choices__inner {
-  border: none;
-  border-radius: 10px;
-}
-
-.choices__placeholder {
-  opacity: 1;
-}
-
-.choices__list--dropdown .choices__placeholder {
-  display: none;
-}
-
-.choices__list--dropdown { /*костыль для продления бордера вверх*/
-  padding-top: 30px;
-  top: calc(100% - 30px);
-}
-
-.choices__list--dropdown .choices__item--selectable {
-  padding-right: 10px;
-  border-bottom: 1px solid var(--color-shade-gray);
+/*костыль для продления бордера вверх*/
+.choices__list--dropdown {
+  padding-top: 12px;
+  top: calc(100% - 12px);
 }
 
 .choices__list--dropdown.is-active {
-  border: 1px solid var(--color-shade-gray);
-  border-top-width: 0;
+  border: 1px solid var(--color-light-color);
+  border-top-color: transparent;
   border-radius: 0 0 10px 10px;
 }
 
+/* interaction styles start */
 .choices__list--dropdown .choices__item--selectable.is-highlighted {
-  background: var(--color-light-color-40);
+  color: var(--color-black);
+  background-color: var(--color-light-color-40);
 }
 
-
-/* скрытие плейсхолдера */
-
-#choices--default-item-choice-6 {
-  display: none;
+.choices__list--dropdown .choices__item--selectable.is-focused{
+  color: var(--color-black);
+  background-color: var(--color-primary-light);
 }
 
-/* стилизация кастомной стрелки */
+.choices__list--dropdown .choices__item--selectable.is-active{
+  color: var(--color-black);
+  background-color: var(--color-light-color);
+}
 
+/* interaction styles end */
+
+/* castomize arrow start */
 .choices[data-type*="select-one"]::after {
   top: 37%;
   right: 17px;
@@ -939,6 +925,7 @@ ul, li {
   border-bottom: 1px solid var(--color-text-gray);
   transform: rotate(135deg);
 }
+/* castomize arrow end */
 
 .choices__item {
   font-weight: 400;
@@ -955,14 +942,20 @@ ul, li {
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  color: var(--color-black);
+  color: var(--color-text-gray);
+}
+.choices__list--dropdown .choices__item:not(:last-child) {
+  border-bottom: 1px solid var(--color-shade-gray);
 }
 
 .choices__list--dropdown .choices__item--selectable {
   padding: 12px 12px;
 }
 
-/* конец селекта */
+/* castom select end */
+
+
+
 
 .transfers-left__bottom {
   display: flex;
@@ -1279,6 +1272,7 @@ ul, li {
 
 .accordion-list-item__link {
   position: relative;
+  cursor: pointer;
   color: var(--color-white);
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
@@ -1294,6 +1288,10 @@ ul, li {
   color: var(--color-white);
   background-color: var(--color-primary-light);
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.accordion-list-item__link--active {
+  color: var(--color-primary-light);
 }
 
 /* interaction styles end */
@@ -1373,7 +1371,12 @@ ul, li {
 
 
 .guests__card {
+  display: none;
   max-width: 350px;
+}
+
+.tabs__content--active {
+  display: block;
 }
 
 .guests-card__image {
@@ -1560,10 +1563,24 @@ ul, li {
   transition: border 0.3s ease-in-out;
 }
 
-.radio__item:focus .radio + span {
-  color: var(--color-shade-gray);
+/* .radio__item:focus-visible {
+  outline: none;
+} */
+
+.radio__label:focus-visible {
+  outline: none;
 }
 
+.radio__label.radio + span {
+  transition: border 0.3s ease-in-out,  background-color 0.3s ease-in-out;
+}
+
+.radio__label:focus-visible .radio + span {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: var(--color-shade-gray);
+  transition: border 0.3s ease-in-out,  background-color 0.3s ease-in-out;
+}
 
 .radio__item:active .radio + span {
   border: 7px solid var(--color-primary);
@@ -2261,3 +2278,192 @@ ul, li {
   color: var(--color-text-gray);
 }
 
+/***************************************************************************************************/
+/* modal form entrance */
+
+.modal__entrance {
+  position: fixed;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black-50);
+  z-index: 100;
+}
+
+.modal__entrance-is-active {
+  display: flex;
+}
+
+.modal__entrance-inner {
+  position: absolute;
+  top: 80px;
+  padding: 60px;
+  width: 824px;
+  height: 655px;
+  background-color: var(--color-black);
+  z-index: 101;
+}
+
+.modal-entrance__title {
+  margin-bottom: 17px;
+  color: var(--color-white);
+}
+
+.modal-entrance__text {
+  margin: 0 0 30px 0;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-white);
+}
+
+.modal-entrance__link {
+  margin-bottom: 25px;
+  color: var(--color-primary);
+}
+
+.modal-entrance-close__btn {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  outline: none;
+}
+
+/* interaction styles start */
+.modal-entrance-close__btn svg circle {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal-entrance-close__btn svg path {
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal-entrance-close__btn:hover svg circle {
+  stroke: var(--color-primary);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal-entrance-close__btn:hover svg path {
+  stroke: var(--color-primary);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal-entrance-close__btn:focus-visible svg circle {
+  stroke: var(--color-primary-light);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal-entrance-close__btn:focus-visible svg path {
+  stroke: var(--color-primary-light);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal-entrance-close__btn:active svg circle {
+  stroke: var(--color-primary-shade);
+  transition: stroke 0.3s ease-in-out;
+}
+
+.modal-entrance-close__btn:active svg path {
+  stroke: var(--color-primary-shade);
+  transition: stroke 0.3s ease-in-out;
+}
+
+/* interaction styles end */
+
+.modal-entrance__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  width: 100%;
+  border-bottom: 1px solid var(--color-light-color-40);
+}
+
+.modal-entrance-form__input {
+  margin-bottom: 30px;
+  padding: 25px 32px;
+  width: 526px;
+  border: 1px solid var(--color-white);
+  border-radius: 40px;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-white);
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out,border-color 0.3s ease-in-out;
+  outline: none;
+}
+
+.modal-entrance-form__input::placeholder {
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-text-gray);
+}
+
+/* interaction styles start */
+.modal-entrance-form__input:hover {
+  background-color: var(--color-light-black-10);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modal-entrance-form__input:focus-visible {
+  border-color: var(--color-primary-light);
+  transition: border-color 0.3s ease-in-out;
+}
+
+.modal-entrance-form__input:active {
+  border-color: var(--color-white);
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out,border-color 0.3s ease-in-out;
+}
+
+/* interaction styles end */
+
+.modal-entrance-form__btn {
+  margin-bottom: 30px;
+  padding: 23px 52px;
+}
+
+.modal-entrance__list {
+  display: flex;
+}
+
+.modal-entrance__item {
+  width: 40px;
+  height: 40px;
+  outline: none;
+}
+
+.modal-entrance__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.modal-entrance__link {
+  outline: none;
+}
+
+/* interaction styles start */
+
+.modal-entrance__link svg rect {
+  transition: fill 0.3s ease-in-out;
+}
+
+.modal-entrance__link:hover svg rect {
+  fill: var(--color-primary);
+  transition: fill 0.3s ease-in-out;
+}
+
+.modal-entrance__link:focus-visible svg rect {
+  fill: var(--color-primary-light);
+  transition: fill 0.3s ease-in-out;
+}
+
+.modal-entrance__link:active svg rect {
+  fill: var(--color-primary-shade);
+  transition: fill 0.3s ease-in-out;
+}
+
+/* interaction styles end */
