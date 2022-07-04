@@ -2079,6 +2079,18 @@ ul, li {
   background-color: transparent;
   border: 1px solid var(--color-white);
   border-radius: 30px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-white);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.about-form__textarea::placeholder {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-text-gray);
 }
 
 .about-form__input {
@@ -2089,7 +2101,59 @@ ul, li {
   background-color: transparent;
   border: 1px solid var(--color-white);
   border-radius: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: var(--color-white);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
+
+.about-form__input::placeholder {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--color-text-gray);
+}
+
+.about-form__textarea:hover {
+  background-color: var(--color-light-black-10);
+  transition: background-color 0.3s ease-in-out;
+}
+
+
+.about-form__input:hover {
+  background-color: var(--color-light-black-10);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.about-form__textarea:focus-visible {
+  border-color: var(--color-primary-light);
+  background-color: var(--color-light-black-10);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+
+.about-form__input:focus-visible {
+  border-color: var(--color-primary-light);
+  background-color: var(--color-light-black-10);
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.about-form__textarea:active {
+  border-color: var(--color-white);
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+
+.about-form__input:active {
+  border-color: var(--color-white);
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+
+
 
 .input__box {
   display: flex;
