@@ -38,13 +38,16 @@
   <link rel="preload" href="/fonts/muller-regularitalic.woff" as="font" crossorigin>
   <link rel="preload" href="/fonts/muller-regularitalic.woff2" as="font" crossorigin>
 
-  <!-- css -->
+  <!-- CSS start -->
   <!-- Include Choices CSS -->
   <link  rel="stylesheet"  href="/css/choices.min.css"/>
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/media.css">
+  <!-- CSS end -->
 
   <!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -2297,6 +2300,41 @@
             </svg>
           </span>
         </div>
+
+        <div class="about__list">
+          <div class="about__item">
+            <img class="about-item__img" src="/img/about-list-image1.jpg" alt="Фото Дмитрия Гутенберга">
+            <h4 class="about-item__title">Дмитрий Гутенберг</h4>
+            <p class="about-item__description">Эксперт (ну, почти) по всем вопросам (почти).</p>
+          </div>
+          <div class="about__item">
+            <img class="about-item__img" src="/img/about-list-image2.jpg" alt="Фото Анны Васильевой">
+            <h4 class="about-item__title">Анна Васильева</h4>
+            <p class="about-item__description">Как я здесь оказалась? А главное — зачем?</p>
+          </div>
+          <div class="about__item">
+            <img class="about-item__img" src="/img/about-list-image3.jpg" alt="Фото Петра Дмитриевского">
+            <h4 class="about-item__title">Пётр Дмитриевский</h4>
+            <p class="about-item__description">Господа! Внимание!! Благодарю за внимание!!!</p>
+          </div>
+          <div class="about__item">
+            <img class="about-item__img" src="/img/about-list-image4.jpg" alt="Фото Татьяны Флегановой">
+            <h4 class="about-item__title">Татьяна Флеганова</h4>
+            <p class="about-item__description">Одна я в пальто стою красивая, а вокруг...</p>
+          </div>
+          <div class="about__item">
+            <img class="about-item__img" src="/img/about-list-image5.jpg" alt="Фото Фёдора Прокопьева">
+            <h4 class="about-item__title">Фёдор Прокопьев</h4>
+            <p class="about-item__description">Привет! Я фотограф, музыкант, ведущий</p>
+          </div>
+          <div class="about__item">
+            <img class="about-item__img" src="/img/about-list-image6.jpg" alt="Фото Светланы Кортневой">
+            <h4 class="about-item__title">Светлана Кортнева</h4>
+            <p class="about-item__description">Художник-оформитель. Оформляю</p>
+          </div>
+        </div>
+
+        <!--
         <ul class="about__list">
           <li class="about__item">
             <img class="about-item__img" src="/img/about-list-image1.jpg" alt="Фото Дмитрия Гутенберга">
@@ -2318,7 +2356,8 @@
             <h4 class="about-item__title">Татьяна Флеганова</h4>
             <p class="about-item__description">Одна я в пальто стою красивая, а вокруг...</p>
           </li>
-        </ul>
+        </ul> -->
+
         <form action="" method="get" class="about__form">
           <textarea class="about-form__textarea" name="" id="about-text" cols="50" rows="5" placeholder="Что скажете?"></textarea>
           <div class="input__box">
@@ -2472,6 +2511,22 @@
 
   <!-- Include Choices JavaScript -->
   <script src="/js/choices.min.js"></script>
+
+  <!-- Slick Slider JS -->
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <!-- Slick Slider setting -->
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.about__list').slick({
+        dots: false,
+        infinite: true,
+        slidesToShow: 4,
+        slidesToScroll: 1
+      });
+    });
+  </script>
+
   <!-- js -->
   <script src="js/app.js"></script>
 

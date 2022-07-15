@@ -2060,6 +2060,38 @@ ul, li {
   color: var(--color-text-gray);
 }
 
+/*  slick-slider settings  */
+
+.slick-arrow {
+  position: absolute;
+  top: 107px;
+  margin: 0;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  border: none;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+  background: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.slick-prev {
+  left: -75px;
+  background-image: url('../img/guest-arow-prev.svg');
+}
+
+.slick-next {
+  right: -54px;
+  background-image: url('../img/guest-arow-next.svg');
+}
+
+
+
 /* about form */
 
 .about__form {
