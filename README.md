@@ -1,4 +1,4 @@
 # course_paper_1-weblayout-
 Course work on the course "Web layout basic level"
 
-![Image alt]([https://github.com/{romahawk-ru}/{course_paper_1-weblayout}/raw/{master}/{path}/Desktop-1920.jpg](https://raw.githubusercontent.com/romahawk-ru/course_paper_1-weblayout/main/Desktop-1920.jpg))
+![image](https://user-images.githubusercontent.com/70915888/194959291-fc5614a4-0cf1-4446-b194-ce372a21137a.png)
