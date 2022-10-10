@@ -17,7 +17,7 @@ for (let anchor of anchors) {
 
 // реализация поиска по сайту
 const searchBtn = document.getElementById('search-btn');
-const searchForm = document.getElementById('search__form');
+const searchForm = document.getElementById('search-form');
 const searchFormCloseBtn = document.getElementById('search-form-close-btn');
 
 searchBtn.addEventListener('click', function() {
@@ -36,11 +36,11 @@ const entranceModal = document.getElementById('entrance-modal');
 const entranceModalCloseBtn = document.getElementById('modal-entrance-close');
 
 entranceModalOpenBtn.addEventListener('click', function() {
-  entranceModal.classList.add('modal__entrance-is-active');
+  entranceModal.classList.add('modal-entrance-is-active');
 });
 
 entranceModalCloseBtn.addEventListener('click', function() {
-  entranceModal.classList.remove('modal__entrance-is-active');
+  entranceModal.classList.remove('modal-entrance-is-active');
 });
 
 
@@ -118,8 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
     tabsBtn.forEach(el => {el.classList.remove('accordion-list-item__link--active')});
     document.querySelector(`[data-tabs-path="${path}"]`).classList.add('accordion-list-item__link--active');
 
-    tabsContent.forEach(el => {el.classList.remove('tabs__content--active')});
-    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs__content--active');
+    tabsContent.forEach(el => {el.classList.remove('tabs-content-active')});
+    document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs-content-active');
   };
 
 });
