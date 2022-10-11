@@ -137,13 +137,14 @@ ul, li {
   padding: 20px 45px;
 }
 
-.footer__social-logo-link {
-  outline: none;
-}
-
-.header-logo-img {
+.header-logo-link {
+  display: block;
   width: 160px;
   height: 20px;
+}
+
+.footer__social-logo-link {
+  outline: none;
 }
 
 .header__list {
@@ -152,7 +153,7 @@ ul, li {
 }
 
 .header__list-item:not(:last-child) {
-  margin-right: 58px;
+  margin-right: 59px;
 }
 
 .header__list-item-link {
@@ -259,27 +260,8 @@ ul, li {
   display: flex;
 }
 
-.search-form__close-btn svg circle {
-  transition: fill 0.3s ease-in-out;
-}
-
-.search-form__close-btn:hover svg circle {
-  fill: var(--color-primary);
-  transition: fill 0.3s ease-in-out;
-}
-
-.search-form__close-btn:focus-visible svg circle {
-  fill: var(--color-primary-light);
-  transition: fill 0.3s ease-in-out;
-}
-
-.search-form__close-btn:active svg circle {
-  fill: var(--color-primary-shade);
-  transition: fill 0.3s ease-in-out;
-}
-
 .header__login-btn {
-  padding: 10px 31px;
+  padding: 0.63em 1.9em;
   border-radius: 77px;
   border: 2px solid var(--color-black);
   font-weight: 500;
@@ -1735,7 +1717,7 @@ ul, li {
 
 }
 
-.playlists__list-item-titlee {
+.playlists__list-item-title {
   margin: 0 0 4px 0;
   font-weight: 500;
   color: var(--color-black);
@@ -1801,7 +1783,7 @@ ul, li {
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.playlists__list-item .playlists__list-item-titlee {
+.playlists__list-item .playlists__list-item-title {
   transition: color 0.3s ease-in-out;
 }
 
@@ -1815,7 +1797,7 @@ ul, li {
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.playlists__list-item:hover .playlists__list-item-titlee {
+.playlists__list-item:hover .playlists__list-item-title {
   color: var(--color-white);
   transition: color 0.3s ease-in-out;
 }
@@ -1847,7 +1829,7 @@ ul, li {
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.playlists__list-item:focus-visible .playlists__list-item-titlee {
+.playlists__list-item:focus-visible .playlists__list-item-title {
   color: var(--color-black);
   transition: color 0.3s ease-in-out;
 }
@@ -1875,7 +1857,7 @@ ul, li {
   transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-.playlists__list-item:active .playlists__list-item-titlee {
+.playlists__list-item:active .playlists__list-item-title {
   color: var(--color-white);
   transition: color 0.3s ease-in-out;
 }

@@ -18,15 +18,11 @@ for (let anchor of anchors) {
 // реализация поиска по сайту
 const searchBtn = document.getElementById('search-btn');
 const searchForm = document.getElementById('search-form');
-const searchFormCloseBtn = document.getElementById('search-form-close-btn');
+const siteContainer = document.getElementById('site-container');
 
 searchBtn.addEventListener('click', function() {
-    searchForm.classList.add('search-form__is-active');
-});
-
-searchFormCloseBtn.addEventListener('click', function(event) {
-    event.preventDefault();
-    searchForm.classList.remove('search-form__is-active');
+  searchForm.classList.add('search-form__is-active');
+  console.log('asd');
 });
 
 
