@@ -14,16 +14,34 @@ for (let anchor of anchors) {
   })
 }
 
+// ========================================================
 
-// реализация поиска по сайту
+
+// реализация открытия - закрытия поиска по сайту
 const searchBtn = document.getElementById('search-btn');
 const searchForm = document.getElementById('search-form');
-const siteContainer = document.getElementById('site-container');
 
-searchBtn.addEventListener('click', function() {
-  searchForm.classList.add('search-form__is-active');
-  console.log('asd');
-});
+const toggleSearchForm = function() {
+  searchForm.classList.toggle('search-form__is-active');
+}
+
+searchBtn.addEventListener('click', function(e) {
+  e.stopPropagation();
+  toggleSearchForm();
+})
+
+document.addEventListener('click', function(e) {
+  const target = e.target;
+  const its_searchForm = target == searchForm || searchForm.contains(target);
+  const its_searchBtn = target == searchBtn;
+  const searchForm_is_active = searchForm.classList.contains("search-form__is-active");
+
+  if (!its_searchForm && !its_searchBtn && searchForm_is_active) {
+    toggleSearchForm();
+  }
+})
+
+// ========================================================
 
 
 // реализация модального окна входа/регистрации
@@ -39,6 +57,7 @@ entranceModalCloseBtn.addEventListener('click', function() {
   entranceModal.classList.remove('modal-entrance-is-active');
 });
 
+// ========================================================
 
 
 // функционал mp3 плеера в секции header
@@ -58,9 +77,11 @@ const secondPauseBtnIcon = document.getElementById('player-pause2');
 
 secondPlayerButton.addEventListener('click', () => secondPlayer.paused && firstPlayer.paused ? secondPlayer.play()+secondPlayBtnIcon.classList.add('player-is-non-active')+secondPauseBtnIcon.classList.add('player-is-active') : !firstPlayer.paused ? firstPlayer.pause()+pauseBtnIcon.classList.remove('player-is-active')+playBtnIcon.classList.remove('player-is-non-active') + secondPlayer.play()+secondPlayBtnIcon.classList.add('player-is-non-active')+secondPauseBtnIcon.classList.add('player-is-active') : secondPlayer.pause()+secondPlayBtnIcon.classList.remove('player-is-non-active')+secondPauseBtnIcon.classList.remove('player-is-active'));
 
+// ========================================================
+
 // реализация открытия дополнительных подкастов
 $(document).ready(function() {
-  var list = $(".podcasts-list__item");
+  var list = $(".podcasts__list-item");
   var numToShow = 8; //сколько показывать элементов
   var button = $("#podcasts-btn");
   var numInList = list.length;
@@ -79,12 +100,16 @@ $(document).ready(function() {
   });
 });
 
+// ========================================================
+
 // инициализация кастомного Select
 const defaultSelect = () => {
   const element = document.querySelector('.default');
   const choices = new Choices(element, {
     searchEnabled: false,
-    itemSelectText: ""
+    itemSelectText: "",
+    shouldSort: false,
+    position: 'bottom'
   });
 
   let ariaLabel = element.getAttribute('aria-label');
@@ -93,8 +118,9 @@ const defaultSelect = () => {
 
 defaultSelect();
 
-// реализация табов
+// ========================================================
 
+// реализация табов
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelector('.accordion');
   const tabsBtn = document.querySelectorAll('.accordion-list-item__link');
@@ -120,5 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+// ========================================================
 
 
