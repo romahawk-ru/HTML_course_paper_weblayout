@@ -123,12 +123,12 @@ defaultSelect();
 // реализация табов
 document.addEventListener('DOMContentLoaded', () => {
   const tabs = document.querySelector('.accordion');
-  const tabsBtn = document.querySelectorAll('.accordion-list-item__link');
+  const tabsBtn = document.querySelectorAll('.accordion__list-item-link');
   const tabsContent = document.querySelectorAll('.guests__card');
 
   if(tabs) {
     tabs.addEventListener('click', (e) => {
-      if(e.target.classList.contains('accordion-list-item__link')) {
+      if(e.target.classList.contains('accordion__list-item-link')) {
         const tabsPath = e.target.dataset.tabsPath;
         console.log(tabsPath);
         tabsHandler(tabsPath);
@@ -137,8 +137,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   const tabsHandler = (path) => {
-    tabsBtn.forEach(el => {el.classList.remove('accordion-list-item__link--active')});
-    document.querySelector(`[data-tabs-path="${path}"]`).classList.add('accordion-list-item__link--active');
+    tabsBtn.forEach(el => {el.classList.remove('accordion__list-item-link--active')});
+    document.querySelector(`[data-tabs-path="${path}"]`).classList.add('accordion__list-item-link--active');
 
     tabsContent.forEach(el => {el.classList.remove('tabs-content-active')});
     document.querySelector(`[data-tabs-target="${path}"]`).classList.add('tabs-content-active');
