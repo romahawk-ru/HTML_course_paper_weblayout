@@ -115,18 +115,33 @@
     padding-top: 91px;
     padding-bottom: 96px;
   }
-
   .transfers__left {
-    max-height: 566px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(255px, 1fr));
+    gap: 30px;
   }
 
-  .transfers__list-item:not(:nth-child(3n)) {
-    margin-right: 0;
+  .transfers-left-top {
+    grid-column: 1 / 1 span;
   }
 
-  .transfers__list-item:not(:nth-child(2n)) {
-    margin-right: 29px;
+  .transfers-left-bottom {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    grid-column: 1 / 1 span;
+    grid-row: 2 / 1 span;
+    margin-top: -94px;
   }
+
+  .transfers__right {
+    margin-top: -43px;
+    grid-column: 2 / 2 span;
+    grid-row: 1 / 2 span;
+  }
+
+
 
   /* section guests*/
 
@@ -165,10 +180,8 @@
   /* section playlists */
 
   .playlists__container {
-    align-items: flex-start;
-    flex-direction: column;
     padding-top: 91px;
-    padding-bottom: 93px;
+    padding-bottom: 94px;
   }
 
   .radio-list {
@@ -177,24 +190,78 @@
     max-width: 337px;
   }
 
-  .playlists__left {
-    width: 100%;
-    height: 268px;
+  .playlists__list {
+    display: grid;
+    grid-template-columns: repeat(3, 255px);
+    grid-template-rows: repeat(4, 112px);
+    gap: 30px;
+    margin-top: -8px;
+  }
+
+  .playlists__left-bottom-text {
+    max-width: 100%;
   }
 
   .playlists__list-item {
     position: relative;
     display: flex;
-    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .playlists__list-item-top {
+    min-height: 112px;
+  }
+
+  .playlists__list-item-top-lang {
+    left: 0;
+  }
+
+  .playlists__list-item-bottom {
+    padding:  37px 5px 14px 9px;
+    border: 1px solid var(--color-light-color);
+    height: 112px;
+    width: 100%;
+  }
+
+  .playlists__list-item-top > img {
+    width: 112px;
+  }
+
+  .radio-box {
+    grid-column: 1 / 4 span;
+    grid-row: 1 / 1 span;
+  }
+
+  .playlists__right {
+    margin-top: 0;
+    margin-bottom: 10px;
+    grid-column: 1 / 4 span;
+    grid-row: 2 / 6 span;
+  }
+
+  .playlists__left-bottom {
+    grid-column: 1 / 4 span;
+    grid-row: 8 / 1 span;
+    margin-top: 0;
+    padding-top: 40px;
+  }
+
+   /* section radio-column */
+
+    .radio-column__container {
+    padding-top: 91px;
+    padding-bottom: 94px;
+  }
+
+  .radio-column__left-img {
+    margin-top: 121px;
+    max-width: 397px;
+    margin-left: 0px;
   }
 
 
-  .playlists__list-item:not(:nth-child(4n)) {
-    margin-right: 0;
-  }
 
-  .playlists__list-item:not(:nth-child(3n)) {
-    margin-right: 30px;
-  }
+
 
 }
