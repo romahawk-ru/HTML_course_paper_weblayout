@@ -524,7 +524,7 @@ ul, li {
 
 .hero-btn {
   display: inline-block;
-  padding: 1.14em 2.61em;
+  padding: 1.15em 2.61em;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -552,12 +552,8 @@ ul, li {
   background-color: var(--color-primary-shade);
 }
 
-.hero__img {
-  margin-right: 4px;
-  max-width: 350px;
-}
-
 .hero__img-image {
+  margin-top: 0;
   width: 100%;
 }
 
@@ -1628,7 +1624,7 @@ ul, li {
 
 .playlists__list-item-top {
   position: relative;
-  min-height: 160px;
+  height: 160px;
 }
 
 .playlists__list-item-top > img {
@@ -1802,7 +1798,7 @@ ul, li {
   display: flex;
   align-items: flex-start;
   padding-top: 91px;
-  padding-bottom: 134px;
+  padding-bottom: 135px;
 }
 
 .radio-column__left {
@@ -1829,6 +1825,8 @@ ul, li {
 
 .radio-column__vector-decorate {
   margin-bottom: 14px;
+  width: 100%;
+  overflow: hidden;
 }
 
 .radio-column__text {
@@ -1844,13 +1842,6 @@ ul, li {
 .radio-column__text-bottom {
   margin: 0 0 30px 0;
   max-width: 445px;
-}
-
-.radio-column__text-bottom-decorate {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 180%;
-  color: var(--color-promo-color);
 }
 
 .radio-column__right-price {
@@ -1953,7 +1944,7 @@ ul, li {
 
 .about__container {
   padding-top: 91px;
-  padding-bottom: 91px;
+  padding-bottom: 93px;
 }
 
 .about__top {
@@ -2032,6 +2023,7 @@ ul, li {
 }
 
 .about__item-img {
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -2334,7 +2326,7 @@ ul, li {
 /* section footer */
 
 .footer {
-  padding-top: 94px;
+  padding-top: 92px;
   background-color: var(--color-light-black);
 }
 
@@ -2346,7 +2338,7 @@ ul, li {
 
 .footer__social-logo-link {
   display: inline-block;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .footer__social {
