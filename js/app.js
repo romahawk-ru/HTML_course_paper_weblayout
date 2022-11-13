@@ -148,4 +148,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // ========================================================
 
+// реализация открытия бургер меню
+
+const burgerOpenBtn = document.getElementById('burger-btn');
+const burgerMenu = document.getElementById('burger-menu');
+const burgerCloseBtn = document.getElementById('burger-close-btn');
+
+burgerOpenBtn.addEventListener('click', () => {
+  burgerMenu.classList.add('is-active');
+})
+
+burgerCloseBtn.addEventListener('click', () => {
+  burgerMenu.classList.remove('is-active');
+})
+
 
