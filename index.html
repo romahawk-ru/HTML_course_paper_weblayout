@@ -884,7 +884,10 @@
             </div>
           </div>
           <div class="transfers-left-bottom">
-            <img class="transfers-left-bottom-img" src="img/mic-min.png" alt="microphone image">
+            <picture class="transfers-left-bottom-img">
+              <source srcset="img/mic-768.png" media="(max-width: 992px)">
+              <img srcset="img/mic-min.png" alt="Изображение микрофона">
+            </picture>
             <a class="transfers-left-bottom-link" href="#">
               <span class="transfers-left-bottom-link-text">Архив</span>
             </a>
@@ -1513,7 +1516,14 @@
             </div>
           </div>
           <div class="guests__card" data-tabs-target="sergeyDenisov">
-            <img src="img/guests-photo-default.jpg" class="guests__card-image" alt="Фото гостя">
+            <picture class="guests__card-image">
+              <source srcset="img/guests-photo-default-255.jpg" media="(max-width: 1200)">
+              <source srcset="img/guests-photo-default-540.jpg" media="(max-width: 992px)">
+              <source srcset="img/guests-photo-default-255.jpg" media="(max-width: 768px)">
+              <source srcset="img/guests-photo-default-255.jpg" media="(max-width: 576px)">
+              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <!-- guests-photo-default-350.jpg -->
+            </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
                 <a href="#" class="guests__card-social-list-item-link">
