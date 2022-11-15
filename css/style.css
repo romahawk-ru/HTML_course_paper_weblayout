@@ -109,8 +109,8 @@ ul, li {
 
 .container {
   margin: 0 auto;
-  padding: 0 45px;
-  max-width: 1200px;
+  padding: 0 25px;
+  max-width: 1160px;
 }
 
 .title {
@@ -133,7 +133,7 @@ ul, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 45px;
+  padding: 20px 25px;
 }
 
 .header-logo-link {
@@ -499,7 +499,7 @@ ul, li {
   align-items: flex-start;
   justify-content: space-between;
   padding-top: 31px;
-  padding-bottom: 36px;
+  padding-bottom: 34px;
 }
 
 .hero__content {
@@ -677,7 +677,7 @@ ul, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 23px 30px 22px 30px;
+  padding: 23px 30px 22px 31px;
   width: 100%;
   border-bottom: 1px solid var(--color-light-color);
 }
@@ -868,7 +868,7 @@ ul, li {
 
 .transfers__container {
   padding-top: 91px;
-  padding-bottom: 95px;
+  padding-bottom: 97px;
 }
 
 .transfers__left {
@@ -1250,7 +1250,7 @@ ul, li {
 
 .guests__container {
   padding-top: 91px;
-  padding-bottom: 94px;
+  padding-bottom: 93px;
 }
 
 .guests__title {
@@ -1430,8 +1430,8 @@ ul, li {
 }
 
 .guests__card-image {
-  margin-top: 2px;
-  margin-bottom: 7px;
+  display: inline-block;
+  margin: 1px 0 7px 0;
 }
 
 .guests__card-social-list {
@@ -1850,7 +1850,7 @@ ul, li {
   display: flex;
   align-items: flex-start;
   padding-top: 91px;
-  padding-bottom: 135px;
+  padding-bottom: 133px;
 }
 
 .radio-column__left {
@@ -1995,8 +1995,8 @@ ul, li {
 }
 
 .about__container {
-  padding-top: 91px;
-  padding-bottom: 93px;
+  padding-top: 92px;
+  padding-bottom: 92px;
 }
 
 .about__top {
@@ -2051,6 +2051,8 @@ ul, li {
   margin-right: 32px;
   width: 160px;
   height: 290px;
+  overflow: hidden;
+  transform: translateX(0);
 }
 
 .about__dawn-image {
@@ -2066,13 +2068,13 @@ ul, li {
 }
 
 .about__item {
-  max-width: 255px;
+  /* max-width: 255px; */
   outline: none;
 }
 
-.about__item:not(:last-child) {
+/* .about__item:not(:last-child) {
   margin-right: 30px;
-}
+} */
 
 .about__item-img {
   display: block;
@@ -2097,6 +2099,14 @@ ul, li {
 }
 
 /*  slick-slider settings  */
+
+.slick-list {
+  margin: 0 -15px;
+}
+
+.slick-slide {
+  padding: 0 15px;
+}
 
 .slick-arrow {
   position: absolute;
@@ -2378,7 +2388,7 @@ ul, li {
 /* section footer */
 
 .footer {
-  padding-top: 92px;
+  padding-top: 94px;
   background-color: var(--color-light-black);
 }
 

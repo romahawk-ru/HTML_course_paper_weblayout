@@ -1,4 +1,4 @@
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
 
   .container {
     padding: 0 25px;
@@ -39,7 +39,7 @@
   }
 
   .header__btns {
-    padding: 19px 0 20px 0;
+    padding: 20px 0;
   }
 
   .header__login-btn {
@@ -80,16 +80,17 @@
   /* section hero */
 
   .hero__container {
-    padding-top: 86px;
-    padding-bottom: 86px;
+    padding-top: 83px;
+    padding-bottom: 85px;
   }
 
   .hero__content {
+    margin: 4px 0 0 0;
     padding: 0;
   }
 
   .hero__title {
-    margin: 0 0 19px 0;
+    margin: 0 0 18px 0;
   }
 
   .hero__text {
@@ -135,7 +136,11 @@
     justify-content: flex-start;
     grid-column: 1 / 1 span;
     grid-row: 2 / 1 span;
-    margin-top: -94px;
+    margin-top: -93px;
+  }
+
+  .transfers-left-bottom-img {
+    margin-bottom: 19px;
   }
 
   .transfers__right {
@@ -172,12 +177,6 @@
 
   .guests__card {
     max-width: 255px;
-  }
-
-  .guests__card-image {
-    margin-top: 0px;
-    margin-bottom: 8px;
-    width: 100%;
   }
 
   /* section playlists */
@@ -295,10 +294,6 @@
     margin-bottom: 37px;
   }
 
-  .about__item {
-    max-width: 397px;
-  }
-
   .slick-next {
     right: -65px;
   }
@@ -318,7 +313,7 @@
   /* section footer */
 
   .footer {
-    padding-top: 94px;
+    padding-top: 95px;
   }
 
   .copyright svg {
@@ -349,7 +344,7 @@
 
   .header__top-nav {
     position: absolute;
-    top: -120vw;
+    top: -150vw;
     left: 0;
     display: block;
     margin: 0;
@@ -435,8 +430,12 @@
   /* section hero */
 
   .hero__container {
-    padding-top: 86px;
+    padding-top: 82px;
     padding-bottom: 90px;
+  }
+
+  .hero__text {
+    margin: 0 0 21px 0;
   }
 
   .hero__img {
@@ -548,6 +547,182 @@
   .accordion__item-content {
     padding: 29px 0 0px 0;
   }
+
+  .guests__card {
+    max-width: 400px;
+  }
+
+  .guests__card-image {
+    margin: 0px 0 8px 0;
+  }
+
+  /* section playlists */
+
+  .playlists__container {
+    padding-top: 91px;
+    padding-bottom: 94px;
+  }
+
+  .radio-box {
+    grid-column: 1 / 2 span;
+    grid-row: 1 / 1 span;
+  }
+
+  .playlists__left-bottom {
+    grid-column: 1 / 2 span;
+    grid-row: 8 / 1 span;
+    margin-top: 2px;
+    padding-top: 38px;
+  }
+
+  .radio-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  .playlists__right {
+    margin-top: 12px;
+    grid-column: 1 / 2 span;
+    grid-row: 2 / 6 span;
+  }
+
+  .playlists__list {
+    grid-template-columns: repeat(2, 255px);
+  }
+
+  .playlists__left-bottom-text {
+    max-width: 77%;
+  }
+
+  /* section radio-column */
+
+  .radio-column__container {
+    padding-top: 54px;
+    padding-bottom: 93px;
+    flex-wrap: wrap;
+  }
+
+  .radio-column__left {
+    margin: 0 0 43px 0;
+  }
+
+  .radio-column__left-img {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .radio-column__right {
+    max-width: 100%;
+  }
+
+  .radio-column__title {
+    max-width: 390px;
+  }
+
+  .radio-column__text-top {
+    min-width: 535px;
+  }
+
+  .radio-column__text-bottom {
+    min-width: 100%;
+  }
+
+  /* section about */
+
+  .about__container {
+    padding-top: 91px;
+    padding-bottom: 92px;
+  }
+
+  .about__top {
+    flex-wrap: wrap;
+  }
+
+  .about__image-box {
+    margin: 0 0 25px 0;
+  }
+
+  .about__spiral-image {
+    display: inline-block;
+    margin-right: 0px;
+    width: 514px;
+    height: 118px;
+    transform: translateX(-114px);
+  }
+
+  .about__dawn-image {
+    display: inline-block;
+    width: 112px;
+    height: 112px;
+    transform: translateX(-86px);
+  }
+
+  .about__dawn-image > svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .about__list {
+    margin-bottom: 30px;
+  }
+
+  .about__form-input-box {
+    display: block;
+  }
+
+  .about__form-input {
+    width: 100%;
+  }
+
+  .about__text {
+    margin-bottom: 30px;
+  }
+
+  /* section footer */
+
+  .footer__container {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .footer__social-list {
+    justify-content: space-around;
+    max-width: 100%;
+    margin-bottom: 73px;
+  }
+
+  .footer__social-link {
+    outline: none;
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+  }
+
+  .footer__social-link > svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .footer__nav-list {
+    display: block;
+    width: 541px;
+    columns: 3 auto;
+    column-gap: 170px;
+  }
+
+  .footer__nav-item:not(:nth-child(3n)) {
+    margin-bottom: 27px;
+  }
+
+  .copyright {
+    padding-top: 74px;
+  }
+
+  .copyright svg {
+    width: 276%;
+  }
+
+
 
 
 }
