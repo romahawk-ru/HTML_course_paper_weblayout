@@ -1243,6 +1243,10 @@ ul, li {
 
 /* interaction styles end */
 
+.transfers-left-bottom-border {
+  display: none;
+}
+
 
 /***************************************************************************************************/
 /*# section guests #*/
