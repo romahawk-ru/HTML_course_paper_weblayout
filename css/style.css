@@ -136,6 +136,10 @@ ul, li {
   padding: 20px 25px;
 }
 
+.header__logo-container {
+  padding: 0;
+}
+
 .header-logo-link {
   display: block;
   width: 160px;
@@ -154,7 +158,6 @@ ul, li {
   flex-direction: column;
   width: 24px;
   height: 24px;
-  margin-left: 106px;
 }
 
 .burger__line {
@@ -1867,6 +1870,7 @@ ul, li {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  max-width: 445px;
 }
 
 .radio-column__title {
@@ -2047,12 +2051,9 @@ ul, li {
 }
 
 .about__spiral-image {
-  display: inline-block;
   margin-right: 32px;
-  width: 160px;
-  height: 290px;
-  overflow: hidden;
-  transform: translateX(0);
+  width: 161px;
+  height: 291px;
 }
 
 .about__dawn-image {
@@ -2496,20 +2497,18 @@ ul, li {
 .copyright {
   padding-top: 89px;
   text-align: center;
-  overflow: hidden;
-}
-
-.copyright svg {
-  width: 107%;
 }
 
 .copyright__text {
   display: block;
-  padding: 5px 0 11px 0;
+  padding: 22px 0 11px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 103.34%;
   color: var(--color-text-gray);
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: -27px 2px;
 }
 
 /***************************************************************************************************/
