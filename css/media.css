@@ -323,6 +323,11 @@
   .footer {
     padding-top: 95px;
   }
+
+  .copyright__text {
+    background-position: -24px 2px;
+    background-size: 190%;
+  }
 }
 
 @media (max-width: 992px) {
@@ -517,7 +522,7 @@
 
   .transfers__right {
     position: relative;
-    margin-top: 19px;
+    margin-top: 18px;
     grid-column: 1 / 2 span;
     grid-row: 3 span;
   }
@@ -672,11 +677,22 @@
     transform: translateX(-114px);
   }
 
+  .about__spiral-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/about-spiral-large.svg);
+    background-repeat: no-repeat;
+  }
+
   .about__dawn-image {
     display: inline-block;
     width: 112px;
     height: 112px;
-    transform: translateX(-86px);
+    transform: translate(-86px, -2px);
   }
 
   .about__dawn-image > svg {
@@ -709,9 +725,10 @@
   }
 
   .footer__social-list {
-    justify-content: space-around;
+    justify-content: center;
     max-width: 100%;
     margin-bottom: 73px;
+    gap: 21px;
   }
 
   .footer__social-link {
@@ -746,7 +763,239 @@
     background-size: 258%;
   }
 
+  /******************/
+  /* modal form entrance */
+
+  .modal-entrance__inner {
+    position: absolute;
+    top: 80px;
+    padding: 60px 40px;
+    width: 539px;
+    background-color: var(--color-black);
+    z-index: 101;
+  }
+
+  .modal-entrance__text {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .modal-entrance__link {
+    margin: 0;
+  }
+
+  .modal-entrance__form-input {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 576px) {
+
+  .container {
+    padding: 0 10px;
+    max-width: 276px;
+  }
+
+  /* section header */
+
+  .header__top-container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  .header__logo-container {
+    padding: 0 10px;
+    max-width: 276px;
+  }
+
+  .header__top-nav {
+    position: absolute;
+    top: -190vw;
+  }
+
+  .is-active {
+    top: 0;
+  }
+
+  .header__logo {
+    padding: 18px 0 22px 0;
+  }
+
+  .header__bottom-btn-container {
+    padding: 0px 10px;
+    width: 276px;
+  }
+
+  .header__btns {
+    position: relative;
+    padding: 13px 0;
+  }
+
+  .header__login-btn {
+    position: absolute;
+    top: -45px;
+    left: -63px;
+    padding: 0.46em 1.4em;
+  }
+
+  .header__search-btn {
+    margin: 0;
+  }
+
+  .header-logo-img {
+    width: 87px;
+    height: 10px;
+  }
+
+  .burger__close-btn {
+    margin-bottom: 24px;
+  }
+
+  .header__top-nav {
+    padding: 13px 32px 24px 32px;
+    height: 50vh;
+  }
 
 
+  /* section hero */
+
+  .hero__container {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  .hero__content {
+    margin: 0;
+  }
+
+  .hero__title {
+    margin: 0 0 9px 0;
+    font-size: 32px;
+  }
+
+  .hero__title-decorate {
+    font-size: 32px;
+    line-height: 100%;
+  }
+
+  .hero__text {
+    margin: 0px 0 21px 0;
+    font-size: 14px;
+    max-width: 251px;
+  }
+
+  .hero-btn {
+    padding: 0.95em 2.72em;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* section about */
+
+  .about__image-box {
+    display: none;
+  }
+
+  .slick-list {
+    margin: 0 -10px;
+  }
+
+  .about__item {
+    padding: 0 10px;
+    max-width: 133px;
+  }
+
+  .about__item-img {
+    margin-bottom: 12px;
+  }
+
+  .about__item-title {
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 100px;
+  }
+
+  .about__item-description {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  /* modal */
+
+  .modal-entrance__inner {
+    top: 55px;
+    padding: 40px 20px;
+    width: 256px;
+  }
+
+  .modal-entrance__title {
+    margin-bottom: 7px;
+    font-size: 24px;
+  }
+
+  .modal-entrance__close-btn {
+    top: 20px;
+    right: 20px;
+  }
+
+  .modal-entrance__close-btn > svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal-entrance__text {
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    line-height: 24px;
+  }
+
+  .modal-entrance__link {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 19px;
+    width: fit-content;
+  }
+
+  .modal-entrance__form {
+    margin-bottom: 9px;
+  }
+
+  .modal-entrance__form-input {
+    margin-bottom: 21px;
+    padding: 9px 17px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .modal-entrance__form-input::placeholder {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  .modal-entrance__form-btn {
+    margin-bottom: 29px;
+    padding: 10px 55px;
+  }
+
+  .modal-entrance__text-in {
+    margin-bottom: 11px;
+  }
+
+  .modal-entrance__list {
+    justify-content: space-between;
+  }
 
 }
