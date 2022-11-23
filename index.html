@@ -22,8 +22,8 @@
   <meta property="og:url" content="http://romahawk.ru/">
   <meta property="og:description" content="Привет, на связи W-Wawe! Раньше мы были изданием, а теперь пробуем себя в разоворном жанре. Говорим о музыке, политике, истории, науке и культуре. Здесь, помимо прямого эфира — архив передач и многое другое :)">
   <meta property="og:image" content="http://romahawk.ru/img/preview.png">
-  <meta property="og:image:width" content="968"/>
-  <meta property="og:image:height" content="504"/>
+  <meta property="og:image:width" content="968">
+  <meta property="og:image:height" content="504">
   <!-- preview end -->
 
   <!-- fonts -->
@@ -40,9 +40,9 @@
 
   <!-- CSS start -->
   <!-- Include Choices CSS -->
-  <link  rel="stylesheet"  href="css/choices.min.css"/>
+  <link  rel="stylesheet"  href="css/choices.min.css">
   <!-- Slick Slider CSS -->
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
@@ -53,6 +53,9 @@
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <!-- Jast Validate -->
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 
   <!--  Accordion init JavaScript -->
   <script>
@@ -80,7 +83,7 @@
             </div>
           </div>
           <nav class="header__top-nav" id="burger-menu">
-            <button class="btn-reset burger__close-btn" id="burger-close-btn"></button>
+            <button class="btn-reset burger-close-btn" id="burger-close-btn"></button>
             <ul class="header__list">
               <li class="header__list-item">
                 <a href="#podcasts" class="header__list-item-link">Подкасты</a>
@@ -99,21 +102,11 @@
               </li>
             </ul>
           </nav>
-          <form action="" class="search-form" id="search-form">
-              <label for="search-input"></label>
-              <input class="search-input" type="search" name="search" id="search-input" placeholder="Поиск по сайту">
-              <button type="submit" class="header__search-btn search-form__search-btn btn-reset" id="search-form-search-btn">
-                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </button>
-          </form>
           <div class="header__bottom-btn-container">
-            <button class="btn-reset burger__btn" id="burger-btn">
-              <span class="burger__line"></span>
-              <span class="burger__line"></span>
-              <span class="burger__line"></span>
+            <button class="btn-reset header__burger-btn" id="burger-btn">
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
+              <span class="header__burger-line"></span>
             </button>
             <div class="header__btns">
               <button class="header__search-btn btn-reset" id="search-btn">
@@ -122,6 +115,16 @@
                   <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               </button>
+              <form action="#" class="search-form" id="search-form">
+                <label for="search-input"></label>
+                <input class="search-input" type="search" name="search" id="search-input" placeholder="Поиск по сайту">
+                <button type="submit" class="header__search-btn search-form__search-btn btn-reset" id="search-form-search-btn">
+                  <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19C15.4183 19 19 15.4183 19 11C19 6.58172 15.4183 3 11 3C6.58172 3 3 6.58172 3 11C3 15.4183 6.58172 19 11 19Z" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21L16.65 16.65" stroke="#6D31EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </button>
+              </form>
               <a href="#" class="header__login-btn" id="entrance-btn">Вход</a>
             </div>
           </div>
@@ -221,7 +224,7 @@
         <div class="hero__img">
           <picture class="hero__img-image">
             <source srcset="img/microphone-min.png" media="(max-width: 1280px)">
-            <img srcset="img/microphone.png" alt="Изображение микрофона">
+            <img src="img/microphone.png" alt="Изображение микрофона">
           </picture>
         </div>
       </div>
@@ -230,7 +233,7 @@
     <section class="podcasts" id="podcasts">
       <div class="container podcasts__container">
         <h2 class="podcasts__title title">Подкасты</h2>
-        <ul class="podcasts__list" id="">
+        <ul class="podcasts__list" id="podcasts__list">
           <li class="podcasts__list-item">
             <img class="podcasts__prew" src="img/podcasts-prew-1.jpg" alt="podcasts image">
             <span class="podcasts__prew-date">14 июня</span>
@@ -890,7 +893,7 @@
           <div class="transfers-left-bottom">
             <picture class="transfers-left-bottom-img">
               <source srcset="img/mic-768.png" media="(max-width: 992px)">
-              <img srcset="img/mic-min.png" alt="Изображение микрофона">
+              <img src="img/mic-min.png" alt="Изображение микрофона">
             </picture>
             <a class="transfers-left-bottom-link" href="#">
               <span class="transfers-left-bottom-link-text">Архив</span>
@@ -1526,7 +1529,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1566,7 +1569,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1606,7 +1609,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1646,7 +1649,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1686,7 +1689,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1726,7 +1729,7 @@
               <source srcset="img/guests-photo-1-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-1-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-1-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-1-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-1-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1766,7 +1769,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1806,7 +1809,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1846,7 +1849,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1886,7 +1889,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1926,7 +1929,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -1966,7 +1969,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -2006,7 +2009,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -2046,7 +2049,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -2086,7 +2089,7 @@
               <source srcset="img/guests-photo-default-255.jpg" media="(min-width: 992px)">
               <source srcset="img/guests-photo-default-540.jpg" media="(min-width: 576px)">
               <source srcset="img/guests-photo-default-256.jpg" media="(max-width: 576px)">
-              <img srcset="img/guests-photo-default-350.jpg" alt="Фото гостя">
+              <img src="img/guests-photo-default-350.jpg" alt="Фото гостя">
             </picture>
             <ul class="guests__card-social-list">
               <li class="guests__card-social-list-item">
@@ -2326,7 +2329,7 @@
             <source srcset="img/radio-image-540.png" media="(min-width: 768px)">
             <source srcset="img/radio-image-397.png" media="(min-width: 576px)">
             <source srcset="img/radio-image-256.png" media="(max-width: 576px)">
-            <img srcset="img/radio-image-640.png" alt="Изображение приемника">
+            <img src="img/radio-image-640.png" alt="Изображение приемника">
           </picture>
         </div>
         <div class="radio-column__right">
@@ -2343,9 +2346,9 @@
           </p>
           <p class="radio-column__text radio-column__text-bottom">
             Итак, встречайте! Портативный радиоприёмник-колонка
-            W-Wave&nbsp1.0&nbspxm. Тщательный подбор всех делатей, ручная сборка,
+            W-Wave&nbsp;1.0&nbsp;xm. Тщательный подбор всех делатей, ручная сборка,
             качественный звук. Пока доступно только 60&nbsp;штук&nbsp;в&nbsp;3 цветах,
-            но&nbspмы&nbspактивно трудимся над новыми партиями&nbsp;и&nbsp;дизайном. Спешите приобрести!
+            но&nbsp;мы&nbsp;активно трудимся над новыми партиями&nbsp;и&nbsp;дизайном. Спешите приобрести!
           </p>
           <span class="radio-column__right-price">2 800 &#8381;</span>
           <a href="#" class="radio-column__right-link">
@@ -2387,11 +2390,7 @@
             </p>
           </div>
           <div class="about__image-box">
-            <span class="about__spiral-image">
-              <!-- <svg width="513" height="114" viewbox="0 0 513 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path opacity="0.5" d="M377.276 72.88C377.276 33.343 366.862 1.29221 354.015 1.29221C341.169 1.29221 330.754 33.343 330.754 72.88C330.754 95.0376 335.163 113 340.601 113C346.039 113 350.448 95.0376 350.448 72.88C350.448 33.343 340.034 1.29221 327.187 1.29221C314.34 1.29221 303.926 33.343 303.926 72.88C303.926 95.0376 308.334 113 313.773 113C319.211 113 323.619 95.0376 323.619 72.88C323.619 33.343 313.141 1.29221 300.216 1.29221C287.29 1.29221 276.812 33.343 276.812 72.88C276.812 95.0376 281.22 113 286.659 113C292.097 113 296.505 95.0376 296.505 72.88C296.505 33.343 286.091 1.29221 273.244 1.29221C260.398 1.29221 249.984 33.343 249.984 72.88C249.984 95.0376 254.392 113 259.83 113C265.268 113 269.677 95.0376 269.677 72.88C269.677 33.343 259.262 1.29221 246.415 1.29221C233.569 1.29221 223.155 33.343 223.155 72.88C223.155 95.0376 227.564 113 233.001 113C238.439 113 242.848 95.0376 242.848 72.88C242.848 33.343 232.433 1.29221 219.587 1.29221C206.741 1.29221 196.326 33.343 196.326 72.88C196.326 95.0376 200.735 113 206.173 113C211.611 113 216.019 95.0376 216.019 72.88C216.019 33.343 205.541 1.2922 192.616 1.2922C179.691 1.2922 169.212 33.343 169.212 72.88M512 72.88C512 33.343 501.586 1.29221 488.739 1.29221C475.892 1.29221 465.478 33.343 465.478 72.88C465.478 95.0376 469.887 113 475.325 113C480.763 113 485.171 95.0376 485.171 72.88C485.171 33.343 474.757 1.29221 461.911 1.29221C449.064 1.29221 438.649 33.343 438.649 72.88C438.649 95.0376 443.058 113 448.496 113C453.934 113 458.343 95.0376 458.343 72.88C458.343 33.343 447.865 1.29221 434.939 1.29221C422.014 1.29221 411.535 33.343 411.535 72.88C411.535 95.0376 415.944 113 421.382 113C426.821 113 431.228 95.0376 431.228 72.88C431.228 33.343 420.815 1.29221 407.968 1.29221C395.121 1.29221 384.707 33.343 384.707 72.88C384.707 95.0376 389.115 113 394.553 113C399.992 113 404.4 95.0376 404.4 72.88C404.4 33.343 393.986 1.29221 381.139 1.29221C368.292 1.29221 357.878 33.343 357.878 72.88C357.878 95.0376 362.287 113 367.725 113C373.163 113 377.572 95.0376 377.572 72.88C377.572 33.343 367.157 1.29221 354.311 1.29221C341.464 1.29221 331.05 33.343 331.05 72.88C331.05 95.0376 335.458 113 340.897 113C346.334 113 350.743 95.0376 350.743 72.88C350.743 33.343 340.265 1.2922 327.34 1.2922C314.414 1.2922 303.936 33.343 303.936 72.88M81.0642 72.5878C81.0642 33.0508 70.65 1.00001 57.8033 1.00001C44.9567 1.00001 34.5423 33.0508 34.5423 72.5878C34.5423 94.7454 38.9508 112.708 44.389 112.708C49.8271 112.708 54.2357 94.7454 54.2357 72.5878C54.2357 33.0508 43.8214 1.00001 30.9747 1.00001C18.128 1.00001 7.7134 33.0507 7.7134 72.5878C7.7134 94.7454 12.1221 112.708 17.5604 112.708C22.9986 112.708 27.4071 94.7454 27.4071 72.5878C27.4071 33.0508 16.9289 1.00001 4.00348 1C-8.9219 1 -19.4005 33.0507 -19.4005 72.5878C-19.4005 94.7454 -14.9918 112.708 -9.55346 112.708C-4.11512 112.708 0.292723 94.7454 0.292724 72.5878C0.292726 33.0507 -10.1211 1 -22.9679 1C-35.8146 1 -46.2285 33.0507 -46.2285 72.5878C-46.2285 94.7454 -41.8206 112.708 -36.3823 112.708C-30.944 112.708 -26.5353 94.7454 -26.5353 72.5878C-26.5353 33.0507 -36.95 1 -49.7967 1C-62.6434 1 -73.0573 33.0507 -73.0573 72.5878C-73.0573 94.7454 -68.6486 112.708 -63.2111 112.708C-57.7728 112.708 -53.3641 94.7454 -53.3641 72.5878C-53.3641 33.0507 -63.7788 1 -76.6247 1C-89.4714 1 -99.8861 33.0507 -99.8861 72.5878C-99.8861 94.7454 -95.4774 112.708 -90.0391 112.708C-84.6016 112.708 -80.1929 94.7454 -80.1929 72.5878C-80.1929 33.0507 -90.6707 1 -103.596 1C-116.521 0.999999 -127 33.0507 -127 72.5878M215.788 72.5878C215.788 33.0508 205.374 1.00001 192.527 1.00001C179.68 1.00001 169.266 33.0508 169.266 72.5878C169.266 94.7454 173.674 112.708 179.113 112.708C184.551 112.708 188.959 94.7454 188.959 72.5878C188.959 33.0508 178.545 1.00001 165.698 1.00001C152.852 1.00001 142.437 33.0507 142.437 72.5878C142.437 94.7454 146.846 112.708 152.284 112.708C157.722 112.708 162.131 94.7454 162.131 72.5878C162.131 33.0508 151.652 1.00001 138.727 1C125.802 1 115.323 33.0507 115.323 72.5878C115.323 94.7454 119.732 112.708 125.17 112.708C130.608 112.708 135.016 94.7454 135.016 72.5878C135.016 33.0507 124.602 1 111.756 1C98.909 1 88.4951 33.0507 88.4951 72.5878C88.4951 94.7454 92.9029 112.708 98.3413 112.708C103.78 112.708 108.188 94.7454 108.188 72.5878C108.188 33.0507 97.7736 1 84.9269 1C72.0802 1 61.6663 33.0507 61.6663 72.5878C61.6663 94.7454 66.075 112.708 71.5125 112.708C76.9508 112.708 81.3595 94.7454 81.3595 72.5878C81.3595 33.0507 70.9448 1 58.0989 1C45.2521 1 34.8375 33.0507 34.8375 72.5878C34.8375 94.7454 39.2461 112.708 44.6845 112.708C50.122 112.708 54.5307 94.7454 54.5307 72.5878C54.5307 33.0507 44.0529 1 31.1275 1C18.2022 0.999999 7.72359 33.0507 7.72359 72.5878" stroke="#A1A6B4" stroke-linecap="round"/>
-              </svg> -->
-            </span>
+            <span class="about__spiral-image"></span>
             <span class="about__dawn-image">
               <svg width="255" height="255" viewbox="0 0 255 255" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path opacity="0.5" d="M127.5 0L127.525 127.375L176.292 9.70532L127.571 127.394L217.656 37.3439L127.606 127.429L245.295 78.7076L127.625 127.475L255 127.5L127.625 127.525L245.295 176.292L127.606 127.571L217.656 217.656L127.571 127.606L176.292 245.295L127.525 127.625L127.5 255L127.475 127.625L78.7076 245.295L127.429 127.606L37.3439 217.656L127.394 127.571L9.70532 176.292L127.375 127.525L0 127.5L127.375 127.475L9.70532 78.7076L127.394 127.429L37.3439 37.3439L127.429 127.394L78.7076 9.70532L127.475 127.375L127.5 0Z" stroke="#A1A6B4"/>
@@ -2408,7 +2407,7 @@
               <source srcset="img/about-list-image1-255.jpg" media="(min-width: 768px)">
               <source srcset="img/about-list-image1-255.jpg" media="(min-width: 576px)">
               <source srcset="img/about-list-image1-113.jpg" media="(max-width: 576px)">
-              <img srcset="img/about-list-image1-255.jpg" alt="Фото Дмитрия Гутенберга">
+              <img src="img/about-list-image1-255.jpg" alt="Фото Дмитрия Гутенберга">
             </picture>
             <h4 class="about__item-title">Дмитрий Гутенберг</h4>
             <p class="about__item-description">Эксперт (ну, почти) по всем вопросам (почти)</p>
@@ -2420,7 +2419,7 @@
               <source srcset="img/about-list-image2-255.jpg" media="(min-width: 768px)">
               <source srcset="img/about-list-image2-255.jpg" media="(min-width: 576px)">
               <source srcset="img/about-list-image2-113.jpg" media="(max-width: 576px)">
-              <img srcset="img/about-list-image2-255.jpg" alt="Фото Анны Васильевой">
+              <img src="img/about-list-image2-255.jpg" alt="Фото Анны Васильевой">
             </picture>
             <h4 class="about__item-title">Анна Васильева</h4>
             <p class="about__item-description">Как я здесь оказалась? А главное — зачем?</p>
@@ -2432,7 +2431,7 @@
               <source srcset="img/about-list-image3-255.jpg" media="(min-width: 768px)">
               <source srcset="img/about-list-image3-255.jpg" media="(min-width: 576px)">
               <source srcset="img/about-list-image3-113.jpg" media="(max-width: 576px)">
-              <img srcset="img/about-list-image3-255.jpg" alt="Фото Петра Дмитриевского">
+              <img src="img/about-list-image3-255.jpg" alt="Фото Петра Дмитриевского">
             </picture>
             <h4 class="about__item-title">Пётр Дмитриевский</h4>
             <p class="about__item-description">Господа! Внимание! Благодарю за внимание!</p>
@@ -2444,7 +2443,7 @@
               <source srcset="img/about-list-image4-255.jpg" media="(min-width: 768px)">
               <source srcset="img/about-list-image4-255.jpg" media="(min-width: 576px)">
               <source srcset="img/about-list-image4-113.jpg" media="(max-width: 576px)">
-              <img srcset="img/about-list-image4-255.jpg" alt="Фото Татьяны Флегановой">
+              <img src="img/about-list-image4-255.jpg" alt="Фото Татьяны Флегановой">
             </picture>
             <h4 class="about__item-title">Татьяна Флеганова</h4>
             <p class="about__item-description">Одна я в пальто стою красивая, а вокруг…</p>
@@ -2456,7 +2455,7 @@
               <source srcset="img/about-list-image5-255.jpg" media="(min-width: 768px)">
               <source srcset="img/about-list-image5-255.jpg" media="(min-width: 576px)">
               <source srcset="img/about-list-image5-113.jpg" media="(max-width: 576px)">
-              <img srcset="img/about-list-image5-255.jpg" alt="Фото Фёдора Прокопьева">
+              <img src="img/about-list-image5-255.jpg" alt="Фото Фёдора Прокопьева">
             </picture>
             <h4 class="about__item-title">Фёдор Прокопьев</h4>
             <p class="about__item-description">Привет! Я фотограф, музыкант, ведущий</p>
@@ -2468,33 +2467,40 @@
               <source srcset="img/about-list-image6-255.jpg" media="(min-width: 768px)">
               <source srcset="img/about-list-image6-255.jpg" media="(min-width: 576px)">
               <source srcset="img/about-list-image6-113.jpg" media="(max-width: 576px)">
-              <img srcset="img/about-list-image6-255.jpg" alt="Фото Светланы Кортневой">
+              <img src="img/about-list-image6-255.jpg" alt="Фото Светланы Кортневой">
             </picture>
             <h4 class="about__item-title">Светлана Кортнева</h4>
             <p class="about__item-description">Художник-оформитель. Оформляю</p>
           </div>
         </div>
 
-        <form action="https://jsonplaceholder.typicode.com/posts" method="post" class="about__form">
-          <textarea class="about__form-textarea" name="message" id="about-text" placeholder="Что скажете?"></textarea>
+        <form class="about__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="off" method="post" id="about__form">
+          <div class="about__form-input-item">
+            <label for="about-text"></label>
+            <textarea class="about__form-textarea" autocomplete="off" name="message" id="about-text" placeholder="Что скажете?"></textarea>
+          </div>
           <div class="about__form-input-box">
-            <label for="name">
-              <input class="about__form-input" type="text" name="name" id="name" placeholder="Имя">
-            </label>
-            <label for="email">
-              <input class="about__form-input" type="email" name="email" id="email" placeholder="Email">
+            <div class="about__form-input-item">
+              <label for="name"></label>
+              <input class="about__form-input" type="text" autocomplete="off" name="name" id="name" placeholder="Имя">
+            </div>
+            <div class="about__form-input-item">
+              <label for="email"></label>
+              <input class="about__form-input" type="email" autocomplete="off" name="email" id="email" placeholder="Email">
+            </div>
+          </div>
+          <button class="btn-reset hero-btn btn-form" type="submit" id="submit-btn">Отправить</button>
+          <div class="about__form-input-item">
+            <label class="checkbox-form" for="checkbox-form">
+              <input type="checkbox" class="visually-hidden about__form-input-checkbox" name="checkbox" id="checkbox-form">
+              <span>Согласен&nbsp;на&nbsp;обработку&nbsp;персональных&nbsp;данных</span>
             </label>
           </div>
-          <button class="btn-reset hero-btn btn-form" type="submit">Отправить</button>
-          <label class="about__form-checkbox-label">
-            <input type="checkbox" role="checkbox" aria-checked="true" class="about__form-input-checkbox" name="checkbox-form">
-            <span class="about__form-checkbox-text">Согласен&nbsp;на&nbsp;обработку&nbsp;персональных&nbsp;данных</span>
-          </label>
         </form>
       </div>
     </section>
 
-    <section class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer__social">
           <a href="#" class="footer__social-logo-link">
@@ -2560,21 +2566,27 @@
       <div class="copyright">
         <span class="copyright__text" style="background-image: url(../img/copyright-vector.svg);">W-WAVE &reg; 2021</span>
       </div>
-    </section>
+    </footer>
 
 
 
 
     <div class="modal-entrance" id="entrance-modal">
-      <div class="modal-entrance__inner">
+      <div class="modal-entrance__inner" id="entrance-modal-inner">
         <h2 class="modal-entrance__title title">Вход</h2>
         <p class="modal-entrance__text">
           Если у вас ещё нет аккаунта,
           <a href="#" class="modal-entrance__link">зарегестрируйтесь</a>
         </p>
-        <form action="" class="modal-entrance__form">
-          <input class="modal-entrance__form-input" type="text" name="login" id="input-login" placeholder="Логин">
-          <input class="modal-entrance__form-input" type="password" name="password" id="input-password" placeholder="Пароль">
+        <form action="#" class="modal-entrance__form" id="modal-entrance-form">
+          <div class="modal-entrance__form-item">
+            <label for="input-login"></label>
+            <input class="modal-entrance__form-input" type="text" name="login" id="input-login" placeholder="Логин">
+          </div>
+          <div class="modal-entrance__form-item">
+            <label for="input-password"></label>
+            <input class="modal-entrance__form-input" type="password" name="password" id="input-password" placeholder="Пароль">
+          </div>
           <button class="modal-entrance__form-btn hero-btn" type="submit">Войти</button>
         </form>
         <p class="modal-entrance__text modal-entrance__text-in">Войти с помощью:</p>
@@ -2617,10 +2629,10 @@
 
 
   <!-- Slick Slider JS -->
-  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
   <!-- Slick Slider setting -->
-  <script type="text/javascript">
+  <script>
     $(document).ready(function(){
       $('.about__list').slick({
         dots: false,
@@ -2655,6 +2667,108 @@
         ]
       });
     })
+  </script>
+
+  <!-- Jast Validate -->
+  <script>
+    const validate = new window.JustValidate('#modal-entrance-form');
+
+    validate
+      .addField('#input-login', [
+        {
+          rule: 'required',
+          errorMessage: 'Поле обязателено для заполнения',
+        },
+        {
+          rule: 'minLength',
+          value: 3,
+          errorMessage: 'Введите минимум 3 символа',
+        },
+        {
+          rule: 'maxLength',
+          value: 30,
+          errorMessage: 'Введите не более 30 символов',
+        },
+      ])
+      .addField('#input-password', [
+        {
+          rule: 'required',
+          errorMessage: 'Поле обязателено для заполнения',
+        },
+        {
+          rule: 'minLength',
+          value: 8,
+          errorMessage: 'Введите минимум 8 символов',
+        },
+        {
+          rule: 'maxLength',
+          value: 30,
+          errorMessage: 'Введите не более 30 символов',
+        }
+      ]);
+
+    const validateAboutForm = new window.JustValidate('#about__form');
+
+    validateAboutForm
+      .addField('#about-text', [
+        {
+          rule: 'required',
+          errorMessage: 'Поле обязателено для заполнения',
+        },
+        {
+          rule: 'minLength',
+          value: 3,
+          errorMessage: 'Введите минимум 3 символа',
+        },
+        {
+          rule: 'maxLength',
+          value: 1000,
+          errorMessage: 'Введите не более 1000 символов',
+        }
+      ])
+      .addField('#name', [
+        {
+          rule: 'required',
+          errorMessage: 'Поле обязателено для заполнения',
+        },
+        {
+          rule: 'minLength',
+          value: 3,
+          errorMessage: 'Введите минимум 3 символа',
+        },
+        {
+          rule: 'maxLength',
+          value: 30,
+          errorMessage: 'Введите не более 30 символов',
+        },
+      ])
+      .addField('#email', [
+        {
+          rule: 'required',
+          errorMessage: 'Поле обязателено для заполнения',
+        },
+        {
+          rule: 'email',
+          errorMessage: 'Email не валидный',
+        },
+        {
+          rule: 'minLength',
+          value: 8,
+          errorMessage: 'Введите минимум 8 символов',
+        },
+        {
+          rule: 'maxLength',
+          value: 30,
+          errorMessage: 'Введите не более 30 символов',
+        }
+      ])
+      .addField('#checkbox-form', [
+        {
+          rule: 'required',
+          errorMessage: 'Поле обязателено для заполнения',
+        }
+      ]);;
+
   </script>
 
   <!-- Include Choices JavaScript -->

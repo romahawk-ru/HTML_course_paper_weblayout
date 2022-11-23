@@ -69,6 +69,7 @@
   --color-primary: #6D31EE;
   --color-primary-30: rgba(170, 157, 250, 0.3);
   --color-primary-light: #AA9DFA;
+  --color-thunderbird: #D52B1E;
   --color-bittersweet: #FF6F6F;
   --color-light-color: #E6E8EC;
   --color-light-color-40: rgba(230, 232, 236, 0.4);
@@ -121,6 +122,17 @@ ul, li {
   color: var(--color-black);
 }
 
+.visually-hidden {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+
 /* header */
 
 .header__top {
@@ -151,7 +163,7 @@ ul, li {
   height: 100%;
 }
 
-.burger__btn {
+.header__burger-btn {
   display: none;
   align-items: flex-start;
   justify-content: space-between;
@@ -160,7 +172,7 @@ ul, li {
   height: 24px;
 }
 
-.burger__line {
+.header__burger-line {
   display: block;
   width: 100%;
   height: 3px;
@@ -172,7 +184,7 @@ ul, li {
   outline: none;
 }
 
-.burger__close-btn {
+.burger-close-btn {
   position: relative;
   margin-bottom: 54px;
   display: none;
@@ -180,7 +192,7 @@ ul, li {
   height: 24px;
 }
 
-.burger__close-btn::before {
+.burger-close-btn::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -193,7 +205,7 @@ ul, li {
   transform: rotate(45deg);
 }
 
-.burger__close-btn::after {
+.burger-close-btn::after {
   content: '';
   position: absolute;
   top: 50%;
@@ -257,6 +269,7 @@ ul, li {
 /* interaction styles end */
 
 .header__btns {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -291,8 +304,8 @@ ul, li {
   position: absolute;
   display: none;
   align-items: center;
-  top: 28px;
-  right: 173px;
+  top: 8px;
+  right: 127px;
   background-color: var(--color-white);
 }
 
@@ -301,6 +314,7 @@ ul, li {
   width: 278px;
   border: none;
   border-bottom: 1px solid var(--color-primary);
+  outline: none;
   background-color: var(--color-white);
 }
 
@@ -2249,24 +2263,25 @@ ul, li {
 .about__form {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
   flex-wrap: wrap;
   max-width: 920px;
 }
 
 .about__form-textarea {
+  position: relative;
   display: block;
   margin-bottom: 30px;
   padding: 30px 32px;
-  resize: none;
+  width: 100%;
   min-height: 150px;
-  background-color: transparent;
   border: 1px solid var(--color-white);
   border-radius: 30px;
   font-weight: 400;
   font-size: 20px;
   line-height: 20px;
   color: var(--color-white);
+  background-color: transparent;
+  resize: none;
   outline: none;
   transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
@@ -2299,6 +2314,10 @@ ul, li {
   font-size: 20px;
   line-height: 20px;
   color: var(--color-text-gray);
+}
+
+.about__form-input-item {
+  position: relative;
 }
 
 /* interaction styles start */
@@ -2345,32 +2364,24 @@ ul, li {
   max-width: 212px;
 }
 
-.about__form-checkbox-label {
-  position: relative;
-  top: 0;
-}
-
-.about__form-input-checkbox {
-  position: absolute;
-  outline: none;
-  opacity: 0;
-}
-
-.about__form-checkbox-text {
+.checkbox-form {
   position: relative;
   padding-left: 22px;
+  cursor: pointer;
+}
+
+.checkbox-form span {
   font-weight: 500;
   font-size: 12px;
   line-height: 12px;
   color: var(--color-white);
-  cursor: pointer;
 }
 
-.about__form-checkbox-text::before {
+.checkbox-form span::before {
   content: '';
   position: absolute;
+  top: 2px;
   left: 0;
-  top: 0;
   border: 1px solid var(--color-white);
   width: 14px;
   height: 14px;
@@ -2378,11 +2389,11 @@ ul, li {
   transition: opacity 0.3s ease-in-out;
 }
 
-.about__form-checkbox-text::after {
+.checkbox-form span::after {
   content: '';
   position: absolute;
+  top: 3px;
   left: 1px;
-  top: 0;
   width: 12px;
   height: 12px;
   background-image: url('../img/ok-img.svg');
@@ -2392,13 +2403,18 @@ ul, li {
   opacity: 0;
 }
 
-.about__form-input-checkbox:checked + .about__form-checkbox-text::after {
+.checkbox-form input:checked + span::after {
   opacity: 1;
 }
 
-.about__form-input-checkbox:focus-visible + .about__form-checkbox-text::before {
+.checkbox-form input:focus-visible + span::before {
   outline: 2px solid var(--color-white);
   transition: outline 0.3s ease-in-out;
+}
+
+.checkbox-form + .just-validate-error-label {
+  top: 22px;
+  left: 0;
 }
 
 /***************************************************************************************************/
@@ -2533,28 +2549,40 @@ ul, li {
 
 .modal-entrance {
   position: fixed;
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   top: 0;
-  left: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
   background-color: var(--color-black-50);
+  opacity: 1;
   z-index: 100;
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
 .modal-entrance-is-active {
-  display: flex;
+  left: 0;
+  /* opacity: 1; */
+  transition: opacity 0.3s ease-in-out, left 0.3s ease-in-out;
 }
 
 .modal-entrance__inner {
   position: absolute;
-  top: 80px;
+  top: -100%;
   padding: 60px;
   width: 824px;
   background-color: var(--color-black);
-  z-index: 101;
+  z-index: 150;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, top 1s ease-in-out;
+}
+
+.modal-entrance__inner-is-active {
+  top: 80px;
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out, top 1s ease-in-out;
 }
 
 .modal-entrance__title {
@@ -2642,6 +2670,23 @@ ul, li {
   margin-bottom: 30px;
   width: 100%;
   border-bottom: 1px solid var(--color-light-color-40);
+}
+
+.modal-entrance__form-item {
+  position: relative;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  left: 33px;
+  top: 6px;
+  font-size: 12px;
+  line-height: 12px;
+  color: var(--color-thunderbird) !important;
+}
+
+.just-validate-error-field {
+  border: 1px solid var(--color-thunderbird) !important;
 }
 
 .modal-entrance__form-input {

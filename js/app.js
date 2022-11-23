@@ -47,14 +47,17 @@ document.addEventListener('click', function(e) {
 // реализация модального окна входа/регистрации
 const entranceModalOpenBtn = document.getElementById('entrance-btn');
 const entranceModal = document.getElementById('entrance-modal');
+const entranceModalInner = document.getElementById('entrance-modal-inner');
 const entranceModalCloseBtn = document.getElementById('modal-entrance-close');
 
 entranceModalOpenBtn.addEventListener('click', function() {
   entranceModal.classList.add('modal-entrance-is-active');
+  entranceModalInner.classList.add('modal-entrance__inner-is-active');
 });
 
 entranceModalCloseBtn.addEventListener('click', function() {
   entranceModal.classList.remove('modal-entrance-is-active');
+  entranceModalInner.classList.remove('modal-entrance__inner-is-active');
 });
 
 // ========================================================
