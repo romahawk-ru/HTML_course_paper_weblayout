@@ -302,11 +302,12 @@ ul, li {
 
 .search-form {
   position: absolute;
-  display: none;
+  display: flex;
   align-items: center;
-  top: 8px;
+  top: -200%;
   right: 127px;
   background-color: var(--color-white);
+  transition: top 0.3s ease-in-out
 }
 
 .search-input {
@@ -323,7 +324,7 @@ ul, li {
 }
 
 .search-form__is-active {
-  display: flex;
+  top: 8px;
 }
 
 .header__login-btn {
@@ -1599,13 +1600,10 @@ ul, li {
   outline: none;
 }
 
-.radio {
-  display: none;
-}
-
 /* interaction styles start */
 
-.radio + span {
+.radio-list__label input + span::before {
+  content: '';
   position: absolute;
   left: 0;
   bottom: 2px;
@@ -1617,31 +1615,31 @@ ul, li {
   transition: border 0.3s ease-in-out;
 }
 
-.radio:checked + span {
+.radio-list__label input:checked + span::before {
   border: 7px solid var(--color-primary);
   opacity: 1;
   transition: border 0.3s ease-in-out;
 }
 
-.radio-list__item .radio + span {
+.radio-list__item .radio-list__label input + span::before {
   transition: border 0.3s ease-in-out;
 }
 
-.radio-list__item:hover .radio + span {
+.radio-list__item:hover .radio-list__label input + span::before {
   border-color: var(--color-primary);
 }
 
-.radio-list__label.radio + span {
+.radio-list__label input + span::before {
   transition: border 0.3s ease-in-out,  background-color 0.3s ease-in-out;
 }
 
-.radio-list__label:focus-visible .radio + span {
+.radio-list__label:focus-visible input + span::before {
   outline: none;
   border-color: var(--color-primary);
   background-color: var(--color-shade-gray);
 }
 
-.radio-list__item:active .radio + span {
+.radio-list__label:active input + span::before {
   border: 7px solid var(--color-primary);
 }
 
@@ -2764,6 +2762,15 @@ ul, li {
 
 .modal-entrance__item-link:active svg rect {
   fill: var(--color-primary-shade);
+}
+
+.scroll-disable {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* interaction styles end */

@@ -54,20 +54,6 @@
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-  <!-- Jast Validate -->
-  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-
-  <!--  Accordion init JavaScript -->
-  <script>
-    $( function() {
-    $( "#accordion" ).accordion({
-      collapsible: false,
-      heightStyle: "content",
-      animate: 300,
-      active: false,
-    });
-  });
-  </script>
 </head>
 <body>
 
@@ -2136,50 +2122,50 @@
             <ul class="radio-list">
               <li class="radio-list__item">
                 <label class="radio-list__label" tabindex="0" for="postpunk">
-                  <input class="radio" type="radio" name="radio__check" id="postpunk" checked> Постпанк
-                  <span></span>
+                  <input class="visually-hidden" type="radio" name="radio__check" id="postpunk" checked>
+                  <span>Постпанк</span>
                 </label>
               </li>
               <li class="radio-list__item">
                 <label class="radio-list__label" tabindex="0" for="hardcore">
-                  <input class="radio" type="radio" name="radio__check" id="hardcore"> Хардкор
-                  <span></span>
+                  <input class="visually-hidden" type="radio" name="radio__check" id="hardcore">
+                  <span>Хардкор</span>
                 </label>
               </li>
               <li class="radio-list__item">
                 <label class="radio-list__label" tabindex="0" for="punkrock">
-                  <input class="radio" type="radio" name="radio__check" id="punkrock"> Панк-рок
-                  <span></span>
+                  <input class="visually-hidden" type="radio" name="radio__check" id="punkrock">
+                  <span>Панк-рок</span>
                 </label>
               </li>
               <li class="radio-list__item">
                 <label class="radio-list__label" tabindex="0" for="rock">
-                  <input class="radio" type="radio" name="radio__check" id="rock"> Рок
-                  <span></span>
+                  <input class="visually-hidden" type="radio" name="radio__check" id="rock">
+                  <span>Рок</span>
                 </label>
               </li>
               <li class="radio-list__item">
                 <label class="radio-list__label" tabindex="0" for="progressiverock">
-                  <input class="radio" type="radio" name="radio__check" id="progressiverock"> Прогрессивный рок
-                  <span></span>
+                  <input class="visually-hidden" type="radio" name="radio__check" id="progressiverock">
+                  <span>Прогрессивный рок</span>
                 </label>
               </li>
               <li class="radio-list__item">
                 <label class="radio-list__label" tabindex="0" for="electron">
-                  <input class="radio" type="radio" name="radio__check" id="electron"> Электронная музыка
-                  <span></span>
+                  <input class="visually-hidden" type="radio" name="radio__check" id="electron">
+                  <span>Электронная музыка</span>
                 </label>
               </li>
               <li class="radio-list__item">
                 <label class="radio-list__label" tabindex="0" for="classic">
-                  <input class="radio" type="radio" name="radio__check" id="classic"> Классическая музыка
-                  <span></span>
+                  <input class="visually-hidden" type="radio" name="radio__check" id="classic">
+                  <span>Классическая музыка</span>
                 </label>
               </li>
               <li class="radio-list__item">
                 <label class="radio-list__label" tabindex="0" for="nature">
-                  <input class="radio" type="radio" name="radio__check" id="nature"> Звуки природы и шум города
-                  <span></span>
+                  <input class="visually-hidden" type="radio" name="radio__check" id="nature">
+                  <span>Звуки природы и шум города</span>
                 </label>
               </li>
             </ul>
@@ -2474,7 +2460,7 @@
           </div>
         </div>
 
-        <form class="about__form" action="https://jsonplaceholder.typicode.com/posts" autocomplete="off" method="post" id="about__form">
+        <form class="about__form" action="#" autocomplete="off" method="POST" id="about__form">
           <div class="about__form-input-item">
             <label for="about-text"></label>
             <textarea class="about__form-textarea" autocomplete="off" name="message" id="about-text" placeholder="Что скажете?"></textarea>
@@ -2492,7 +2478,7 @@
           <button class="btn-reset hero-btn btn-form" type="submit" id="submit-btn">Отправить</button>
           <div class="about__form-input-item">
             <label class="checkbox-form" for="checkbox-form">
-              <input type="checkbox" class="visually-hidden about__form-input-checkbox" name="checkbox" id="checkbox-form">
+              <input type="checkbox" class="visually-hidden" name="checkbox" id="checkbox-form">
               <span>Согласен&nbsp;на&nbsp;обработку&nbsp;персональных&nbsp;данных</span>
             </label>
           </div>
@@ -2568,9 +2554,7 @@
       </div>
     </footer>
 
-
-
-
+<!-- Modal window start -->
     <div class="modal-entrance" id="entrance-modal">
       <div class="modal-entrance__inner" id="entrance-modal-inner">
         <h2 class="modal-entrance__title title">Вход</h2>
@@ -2625,151 +2609,17 @@
       </div>
     </div>
 
+    <!-- Modal window end -->
+
+
   </div>
 
 
   <!-- Slick Slider JS -->
   <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
-  <!-- Slick Slider setting -->
-  <script>
-    $(document).ready(function(){
-      $('.about__list').slick({
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 1281,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 3
-            }
-          },
-          {
-            breakpoint: 1150,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          },
-          {
-            breakpoint: 741,
-            settings: {
-              arrows: false,
-              infinite: false,
-              slidesToShow: 2,
-              slidesToScroll: 2
-            }
-          }
-        ]
-      });
-    })
-  </script>
-
   <!-- Jast Validate -->
-  <script>
-    const validate = new window.JustValidate('#modal-entrance-form');
-
-    validate
-      .addField('#input-login', [
-        {
-          rule: 'required',
-          errorMessage: 'Поле обязателено для заполнения',
-        },
-        {
-          rule: 'minLength',
-          value: 3,
-          errorMessage: 'Введите минимум 3 символа',
-        },
-        {
-          rule: 'maxLength',
-          value: 30,
-          errorMessage: 'Введите не более 30 символов',
-        },
-      ])
-      .addField('#input-password', [
-        {
-          rule: 'required',
-          errorMessage: 'Поле обязателено для заполнения',
-        },
-        {
-          rule: 'minLength',
-          value: 8,
-          errorMessage: 'Введите минимум 8 символов',
-        },
-        {
-          rule: 'maxLength',
-          value: 30,
-          errorMessage: 'Введите не более 30 символов',
-        }
-      ]);
-
-    const validateAboutForm = new window.JustValidate('#about__form');
-
-    validateAboutForm
-      .addField('#about-text', [
-        {
-          rule: 'required',
-          errorMessage: 'Поле обязателено для заполнения',
-        },
-        {
-          rule: 'minLength',
-          value: 3,
-          errorMessage: 'Введите минимум 3 символа',
-        },
-        {
-          rule: 'maxLength',
-          value: 1000,
-          errorMessage: 'Введите не более 1000 символов',
-        }
-      ])
-      .addField('#name', [
-        {
-          rule: 'required',
-          errorMessage: 'Поле обязателено для заполнения',
-        },
-        {
-          rule: 'minLength',
-          value: 3,
-          errorMessage: 'Введите минимум 3 символа',
-        },
-        {
-          rule: 'maxLength',
-          value: 30,
-          errorMessage: 'Введите не более 30 символов',
-        },
-      ])
-      .addField('#email', [
-        {
-          rule: 'required',
-          errorMessage: 'Поле обязателено для заполнения',
-        },
-        {
-          rule: 'email',
-          errorMessage: 'Email не валидный',
-        },
-        {
-          rule: 'minLength',
-          value: 8,
-          errorMessage: 'Введите минимум 8 символов',
-        },
-        {
-          rule: 'maxLength',
-          value: 30,
-          errorMessage: 'Введите не более 30 символов',
-        }
-      ])
-      .addField('#checkbox-form', [
-        {
-          rule: 'required',
-          errorMessage: 'Поле обязателено для заполнения',
-        }
-      ]);;
-
-  </script>
+  <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
 
   <!-- Include Choices JavaScript -->
   <script src="js/choices.min.js"></script>

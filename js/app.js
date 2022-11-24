@@ -16,6 +16,19 @@ for (let anchor of anchors) {
 
 // ========================================================
 
+// реализация работы аккордеона
+
+$( function() {
+  $( "#accordion" ).accordion({
+    collapsible: false,
+    heightStyle: "content",
+    animate: 300,
+    active: false,
+  });
+});
+
+// ========================================================
+
 
 // реализация открытия - закрытия поиска по сайту
 const searchBtn = document.getElementById('search-btn');
@@ -45,6 +58,7 @@ document.addEventListener('click', function(e) {
 
 
 // реализация модального окна входа/регистрации
+const siteContainer = document.getElementById('site-container');
 const entranceModalOpenBtn = document.getElementById('entrance-btn');
 const entranceModal = document.getElementById('entrance-modal');
 const entranceModalInner = document.getElementById('entrance-modal-inner');
@@ -53,11 +67,13 @@ const entranceModalCloseBtn = document.getElementById('modal-entrance-close');
 entranceModalOpenBtn.addEventListener('click', function() {
   entranceModal.classList.add('modal-entrance-is-active');
   entranceModalInner.classList.add('modal-entrance__inner-is-active');
+  siteContainer.classList.add('scroll-disable');
 });
 
 entranceModalCloseBtn.addEventListener('click', function() {
   entranceModal.classList.remove('modal-entrance-is-active');
   entranceModalInner.classList.remove('modal-entrance__inner-is-active');
+  siteContainer.classList.remove('scroll-disable');
 });
 
 // ========================================================
@@ -159,10 +175,182 @@ const burgerCloseBtn = document.getElementById('burger-close-btn');
 
 burgerOpenBtn.addEventListener('click', () => {
   burgerMenu.classList.add('is-active');
+  siteContainer.classList.add('scroll-disable');
 })
 
 burgerCloseBtn.addEventListener('click', () => {
   burgerMenu.classList.remove('is-active');
+  siteContainer.classList.remove('scroll-disable');
 })
 
+// ========================================================
+
+// реализация работы слик слайдера
+
+$(document).ready(function(){
+  $('.about__list').slick({
+    dots: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1281,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 1150,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 741,
+        settings: {
+          arrows: false,
+          infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
+  });
+})
+
+// ========================================================
+
+
+// реализация валидации форм
+
+// форма входа пользователя на сайт
+const validate = new window.JustValidate('#modal-entrance-form');
+
+validate
+  .addField('#input-login', [
+    {
+      rule: 'required',
+      errorMessage: 'Поле обязателено для заполнения',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Введите минимум 3 символа',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Введите не более 30 символов',
+    },
+  ])
+  .addField('#input-password', [
+    {
+      rule: 'required',
+      errorMessage: 'Поле обязателено для заполнения',
+    },
+    {
+      rule: 'minLength',
+      value: 8,
+      errorMessage: 'Введите минимум 8 символов',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Введите не более 30 символов',
+    }
+  ]);
+
+
+// форма отправки сообщений
+
+const validateAboutForm = new window.JustValidate('#about__form');
+
+validateAboutForm
+  .addField('#about-text', [
+    {
+      rule: 'required',
+      errorMessage: 'Поле обязателено для заполнения',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Введите минимум 3 символа',
+    },
+    {
+      rule: 'maxLength',
+      value: 1000,
+      errorMessage: 'Введите не более 1000 символов',
+    }
+  ])
+  .addField('#name', [
+    {
+      rule: 'required',
+      errorMessage: 'Поле обязателено для заполнения',
+    },
+    {
+      rule: 'minLength',
+      value: 3,
+      errorMessage: 'Введите минимум 3 символа',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Введите не более 30 символов',
+    },
+  ])
+  .addField('#email', [
+    {
+      rule: 'required',
+      errorMessage: 'Поле обязателено для заполнения',
+    },
+    {
+      rule: 'email',
+      errorMessage: 'Email не валидный',
+    },
+    {
+      rule: 'minLength',
+      value: 8,
+      errorMessage: 'Введите минимум 8 символов',
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+      errorMessage: 'Введите не более 30 символов',
+    }
+  ]);
+
+// ========================================================
+
+const formMessage = document.getElementById('about-text');
+const formName = document.getElementById('name');
+const formEmail = document.getElementById('email');
+const formBtnSubmit = document.getElementById('submit-btn');
+const formCheckbox = document.getElementById('checkbox-form');
+
+
+formBtnSubmit.addEventListener('click', function() {
+  if ( formMessage.classList.contains('just-validate-success-field') && formName.classList.contains('just-validate-success-field') && formEmail.classList.contains('just-validate-success-field') ) {
+    fetch('https://jsonplaceholder.typicode.com/posts', {
+      method: 'POST',
+      body: JSON.stringify({
+        id: 1,
+        message: formMessage.value,
+        name: formName.value,
+        email: formEmail.value,
+        checkbox: formCheckbox.checked,
+      }),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  }
+
+
+})
 

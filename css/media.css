@@ -52,8 +52,12 @@
   }
 
   .search-form {
-    top: 28px;
+    top: -200%;
     right: 128px;
+  }
+
+  .search-form__is-active {
+    top: 28px;
   }
 
   /* header bottom */
@@ -352,7 +356,7 @@
 
   .header__top-nav {
     position: absolute;
-    top: -200vw;
+    top: -300vw;
     left: 0;
     display: block;
     margin: 0;
@@ -798,6 +802,15 @@
 
 }
 
+@media all and (orientation:landscape) {
+	/* стили для пейзажа */
+  .modal-entrance__inner-is-active {
+    top: 60px;
+    height: 75vh;
+    overflow-y: scroll;
+  }
+}
+
 @media (max-width: 576px) {
 
   .container {
@@ -819,7 +832,7 @@
 
   .header__top-nav {
     position: absolute;
-    top: -190vw;
+    top: -200vw;
   }
 
   .is-active {
@@ -852,8 +865,12 @@
   }
 
   .search-form {
-    top: 13px;
+    top: -200%;
     right: 0;
+  }
+
+  .search-form__is-active {
+    top: 13px;
   }
 
   .search-input {
