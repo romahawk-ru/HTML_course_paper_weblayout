@@ -172,14 +172,17 @@ document.addEventListener('DOMContentLoaded', () => {
 const burgerOpenBtn = document.getElementById('burger-btn');
 const burgerMenu = document.getElementById('burger-menu');
 const burgerCloseBtn = document.getElementById('burger-close-btn');
+const burgerBottomNav = document.getElementById('header-bottom-nav');
 
 burgerOpenBtn.addEventListener('click', () => {
   burgerMenu.classList.add('is-active');
+  burgerBottomNav.classList.add('header__bottom-nav-is-active');
   siteContainer.classList.add('scroll-disable');
 })
 
 burgerCloseBtn.addEventListener('click', () => {
   burgerMenu.classList.remove('is-active');
+  burgerBottomNav.classList.remove('header__bottom-nav-is-active');
   siteContainer.classList.remove('scroll-disable');
 })
 
@@ -351,6 +354,20 @@ formBtnSubmit.addEventListener('click', function() {
       .then((json) => console.log(json));
   }
 
-
 })
+
+// ========================================================
+
+// реализация открытия плеера
+
+const headerBottomPlayerBtn = document.getElementById('header-botoom-player-menu-btn');
+const headerBottomPlayer = document.getElementById('header-bottom-player');
+
+
+headerBottomPlayerBtn.addEventListener('click', () => {
+
+  headerBottomPlayer.classList.toggle('header__bottom-player-is-active');
+  headerBottomPlayerBtn.classList.toggle('header__botoom-player-menu-btn-is-active');
+
+});
 
