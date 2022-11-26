@@ -101,9 +101,15 @@ secondPlayerButton.addEventListener('click', () => secondPlayer.paused && firstP
 // реализация открытия дополнительных подкастов
 $(document).ready(function() {
   var list = $(".podcasts__list-item");
-  var numToShow = 8; //сколько показывать элементов
   var button = $("#podcasts-btn");
   var numInList = list.length;
+
+  if ($(window).width() <= 576) {
+    var numToShow = 4; //сколько показывать элементов
+  } else if ($(window).width() > 576) {
+    var numToShow = 8; //сколько показывать элементов
+  }
+
   list.hide();
   if (numInList > numToShow) {
     button.show();
