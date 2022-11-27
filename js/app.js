@@ -25,6 +25,14 @@ $( function() {
     animate: 300,
     active: false,
   });
+
+  if ($(window).width() < 577) {
+    $('#accordion').accordion({
+      active: 4
+    });
+  }
+
+
 });
 
 // ========================================================
@@ -179,17 +187,20 @@ const burgerOpenBtn = document.getElementById('burger-btn');
 const burgerMenu = document.getElementById('burger-menu');
 const burgerCloseBtn = document.getElementById('burger-close-btn');
 const burgerBottomNav = document.getElementById('header-bottom-nav');
+const headerBottomContainer = document.getElementById('header-bottom-container');
 
 burgerOpenBtn.addEventListener('click', () => {
   burgerMenu.classList.add('is-active');
   burgerBottomNav.classList.add('header__bottom-nav-is-active');
   siteContainer.classList.add('scroll-disable');
+  headerBottomContainer.classList.remove('header__bottom-container-is-relative');
 })
 
 burgerCloseBtn.addEventListener('click', () => {
   burgerMenu.classList.remove('is-active');
   burgerBottomNav.classList.remove('header__bottom-nav-is-active');
   siteContainer.classList.remove('scroll-disable');
+  headerBottomContainer.classList.add('header__bottom-container-is-relative');
 })
 
 // ========================================================
