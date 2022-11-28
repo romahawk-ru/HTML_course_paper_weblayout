@@ -459,7 +459,7 @@
     margin-right: 29px;
   }
 
-  .is-active {
+  .burger-menu-is-active {
     top: 0;
   }
 
@@ -970,7 +970,7 @@
     transition: top 0.3s ease-in-out;
   }
 
-  .is-active {
+  .burger-menu-is-active {
     top: 0;
   }
 

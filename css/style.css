@@ -599,6 +599,7 @@ ul, li {
 .hero-btn {
   display: inline-block;
   padding: 1.15em 2.61em;
+  max-width: 246px;
   font-weight: 500;
   font-size: 20px;
   line-height: 20px;
@@ -2544,7 +2545,7 @@ ul, li {
 
 .copyright__text {
   display: block;
-  padding: 23px 0 11px 0;
+  padding: 23px 0 12px 0;
   font-weight: 400;
   font-size: 16px;
   line-height: 103.34%;

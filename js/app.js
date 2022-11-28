@@ -7,10 +7,18 @@ for (let anchor of anchors) {
 
     const blockID = anchor.getAttribute('href').substr(1)
 
+    // закрытие бургер меню по клику на ссылку
+    burgerMenu.classList.remove('burger-menu-is-active');
+    burgerBottomNav.classList.remove('header__bottom-nav-is-active');
+    siteContainer.classList.remove('scroll-disable');
+    headerBottomContainer.classList.add('header__bottom-container-is-relative');
+    // ============
+
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
     })
+
   })
 }
 
@@ -26,12 +34,16 @@ $( function() {
     active: false,
   });
 
+  // изменение начала акордеона в зависимости от разрешения экрана
   if ($(window).width() < 577) {
     $('#accordion').accordion({
       active: 4
     });
+  } else if ($(window).width() > 577) {
+    $('#accordion').accordion({
+      active: 0
+    });
   }
-
 
 });
 
@@ -190,14 +202,14 @@ const burgerBottomNav = document.getElementById('header-bottom-nav');
 const headerBottomContainer = document.getElementById('header-bottom-container');
 
 burgerOpenBtn.addEventListener('click', () => {
-  burgerMenu.classList.add('is-active');
+  burgerMenu.classList.add('burger-menu-is-active');
   burgerBottomNav.classList.add('header__bottom-nav-is-active');
   siteContainer.classList.add('scroll-disable');
   headerBottomContainer.classList.remove('header__bottom-container-is-relative');
 })
 
 burgerCloseBtn.addEventListener('click', () => {
-  burgerMenu.classList.remove('is-active');
+  burgerMenu.classList.remove('burger-menu-is-active');
   burgerBottomNav.classList.remove('header__bottom-nav-is-active');
   siteContainer.classList.remove('scroll-disable');
   headerBottomContainer.classList.add('header__bottom-container-is-relative');
