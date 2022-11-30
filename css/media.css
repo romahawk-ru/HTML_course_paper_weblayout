@@ -115,7 +115,7 @@
 
   .podcasts__container {
     padding-top: 91px;
-    padding-bottom: 92px;
+    padding-bottom: 91px;
   }
 
   .podcasts__list-item {
@@ -208,6 +208,10 @@
     padding-bottom: 94px;
   }
 
+  .playlists__title {
+    margin-bottom: 12px;
+  }
+
   .radio-list {
     columns: 2 auto;
     column-gap: 0;
@@ -276,7 +280,7 @@
 
     .radio-column__container {
     padding-top: 91px;
-    padding-bottom: 94px;
+    padding-bottom: 95px;
     align-items: center;
   }
 
@@ -657,7 +661,7 @@
   }
 
   .playlists__right {
-    margin-top: 12px;
+    margin-top: 13px;
     grid-column: 1 / 2 span;
     grid-row: 2 / 6 span;
   }
@@ -707,6 +711,7 @@
   }
 
   .radio-column__text-bottom {
+    margin: 0 0 29px 0;
     min-width: 100%;
   }
 
@@ -718,7 +723,7 @@
 
   .about__container {
     padding-top: 91px;
-    padding-bottom: 92px;
+    padding-bottom: 93px;
   }
 
   .about__top {
@@ -958,9 +963,6 @@
   .header__bottom-player-is-active {
     opacity: 1;
   }
-
-
-
 
   .header__bottom-nav {
     position: absolute;
@@ -1336,7 +1338,6 @@
     line-height: 150%;
   }
 
-
   /* section guests */
 
   .guests__container {
@@ -1625,6 +1626,10 @@
   }
 
 /*=====================================================*/
+
+  .playlists__right {
+    margin-top: 12px;
+  }
 
   .playlists__list {
     grid-template-columns: repeat(2, 113px);

@@ -644,7 +644,7 @@ ul, li {
 
 .podcasts__container {
   padding-top: 91px;
-  padding-bottom: 94px;
+  padding-bottom: 93px;
 }
 
 .podcasts__title {
@@ -1318,7 +1318,7 @@ ul, li {
 
 .guests__container {
   padding-top: 91px;
-  padding-bottom: 94px;
+  padding-bottom: 93px;
 }
 
 .guests__title {
@@ -1589,7 +1589,7 @@ ul, li {
 /*# section playlists #*/
 
 .playlists__container {
-  padding-top: 90px;
+  padding-top: 91px;
   padding-bottom: 93px;
 }
 
@@ -1915,7 +1915,7 @@ ul, li {
   display: flex;
   align-items: flex-start;
   padding-top: 91px;
-  padding-bottom: 135px;
+  padding-bottom: 132px;
 }
 
 .radio-column__left {
@@ -2065,8 +2065,8 @@ ul, li {
 }
 
 .about__container {
-  padding-top: 88px;
-  padding-bottom: 92px;
+  padding-top: 90px;
+  padding-bottom: 94px;
 }
 
 .about__top {
@@ -2575,7 +2575,7 @@ ul, li {
 /* interaction styles end */
 
 .copyright {
-  padding-top: 90px;
+  padding-top: 88px;
   text-align: center;
 }
 
@@ -2588,7 +2588,7 @@ ul, li {
   color: var(--color-text-gray);
   overflow: hidden;
   background-repeat: no-repeat;
-  background-position: -9px 2px;
+  background-position: -9px 0;
   background-size: 101%;
 }
 
