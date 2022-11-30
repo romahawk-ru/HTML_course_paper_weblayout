@@ -838,7 +838,9 @@
   }
 
   .modal-entrance__inner-is-active {
-    top: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 1;
     transition: opacity 0.3s ease-in-out, top 1s ease-in-out;
   }
@@ -861,7 +863,9 @@
 @media (min-width: 320px) and (max-width: 576px) and (orientation:landscape) {
 	/* стили для пейзажа */
   .modal-entrance__inner-is-active {
-    top: 60px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     height: 75vh;
     overflow-y: scroll;
   }
@@ -889,7 +893,7 @@
   .header__top-nav {
     position: absolute;
     padding: 13px 32px 24px 32px;
-    top: -200vw;
+    top: -1000%;
     height: 58vh;
     background-image: none;
   }
@@ -1130,17 +1134,34 @@
     margin-bottom: 31px;
   }
 
+  .podcasts__list-item:nth-child(1) .podcasts__prew {
+    background-position: 0 -40px;
+  }
+
+  .podcasts__list-item:nth-child(4) .podcasts__prew {
+    background-position: -1px -49px;
+  }
+
+  .podcasts__list-item:nth-child(8) .podcasts__prew {
+    background-position: 0 -64px;
+  }
+
   .podcasts__prew {
-    width: 256px;
-    height: 72px;
+    bottom: 112px;
+    min-width: 100%;
   }
 
   .podcasts__prew-date {
     top: 0;
   }
 
+  .podcast-list-item-inner {
+    padding-left: 0;
+    padding-top: 85px;
+  }
+
   .podcasts-list-item-inner-top {
-    padding: 15px 16px 17px 16px;
+    padding: 2px 16px 17px 16px;
   }
 
   .podcasts-list-item-inner-top__title {
@@ -1235,9 +1256,21 @@
     grid-template-columns: repeat(2, minmax(113px, 1fr));
   }
 
+  .transfers__list-item {
+    max-width: 133px;
+  }
+
   .transfers-item-img {
-    width: 113px;
-    height: 50px;
+    min-width: 113px;
+    min-height: 50px;
+  }
+
+  .transfers__list-item:nth-child(4) .transfers-item-img {
+    background-position: 0px -12px;
+  }
+
+  .transfers__list-item:nth-child(5) .transfers-item-img {
+    background-position: 0 -2px;
   }
 
   .transfers__list-item-bottom {
@@ -1880,7 +1913,9 @@
   }
 
   .modal-entrance__inner-is-active {
-    top: 55px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     opacity: 1;
     transition: opacity 0.3s ease-in-out, top 1s ease-in-out;
   }

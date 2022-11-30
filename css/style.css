@@ -668,8 +668,14 @@ ul, li {
 }
 
 .podcasts__prew {
-  width: 112px;
-  height: 140px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  min-width: 112px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .podcasts__list-item:not(:nth-child(2n)) {
@@ -678,6 +684,14 @@ ul, li {
 
 .podcasts__list-item:nth-last-child(-n+2) {
   margin-bottom: 0;
+}
+
+.podcasts__list-item:nth-child(4) .podcasts__prew {
+  background-position: -33px 0;
+}
+
+.podcasts__list-item:nth-child(8) .podcasts__prew {
+  background-position: -66px 0;
 }
 
 .podcasts__prew-date {
@@ -698,6 +712,7 @@ ul, li {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  padding-left: 112px;
   width: 100%;
 }
 
@@ -705,7 +720,7 @@ ul, li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 23px 30px 22px 31px;
+  padding: 23px 30px 22px 30px;
   width: 100%;
   border-bottom: 1px solid var(--color-light-color);
 }
@@ -782,11 +797,11 @@ ul, li {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 8px 30px 4px 30px;
+  padding: 8px 30px 5px 30px;
 }
 
 .item-inner-bottom-list__item {
-  margin-right: 33px;
+  margin-right: 29px;
 }
 
 /* interaction styles start */
@@ -810,6 +825,10 @@ ul, li {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   z-index: -1;
+}
+
+.item-inner-bottom-list-item-btn span {
+  margin-left: 3px;
 }
 
 .item-inner-bottom-list-item-btn svg path {
@@ -857,7 +876,7 @@ ul, li {
 
 .podcast-btn {
   display: block;
-  margin: 30px auto 0 auto;
+  margin: 32px auto 0 auto;
   padding: 23px 52px;
   border-radius: 40px;
   border: 2px solid var(--color-primary);
@@ -1150,6 +1169,7 @@ ul, li {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  max-width: 255px;
   cursor: pointer;
 }
 
@@ -1164,6 +1184,22 @@ ul, li {
   border: 1px solid var(--color-primary);
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
+}
+
+.transfers-item-img {
+  min-width: 255px;
+  min-height: 148px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.transfers__list-item:nth-child(4) .transfers-item-img {
+  background-position: 0 -25px;
+}
+
+.transfers__list-item:nth-child(6) .transfers-item-img {
+  background-position: 0 0;
 }
 
 .transfers__list-item-bottom {
@@ -2592,7 +2628,9 @@ ul, li {
 }
 
 .modal-entrance__inner-is-active {
-  top: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   opacity: 1;
   transition: opacity 0.3s ease-in-out, top 1s ease-in-out;
 }
