@@ -865,6 +865,17 @@
 
 }
 
+@media (min-width: 576px) and (max-width: 991px) and (orientation:landscape) {
+	/* стили для пейзажа */
+  .modal-entrance__inner-is-active {
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 84vh;
+    overflow-y: scroll;
+  }
+}
+
 @media (min-width: 320px) and (max-width: 576px) and (orientation:landscape) {
 	/* стили для пейзажа */
   .modal-entrance__inner-is-active {
