@@ -348,10 +348,6 @@
     left: -65px;
   }
 
-  .about__form-textarea {
-    width: 100%;
-  }
-
   .about__form-input {
     width: 397px;
   }
@@ -721,6 +717,10 @@
 
   /* section about */
 
+  .about {
+    overflow: hidden;
+  }
+
   .about__container {
     padding-top: 91px;
     padding-bottom: 93px;
@@ -884,6 +884,12 @@
     transform: translate(-50%, -50%);
     height: 75vh;
     overflow-y: scroll;
+  }
+}
+
+@media (max-width: 580px) {
+  .transfers__list-item {
+    max-width: 252px;
   }
 }
 

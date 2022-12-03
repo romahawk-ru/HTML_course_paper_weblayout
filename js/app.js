@@ -35,13 +35,13 @@ $( function() {
   });
 
   // изменение начала акордеона в зависимости от разрешения экрана
-  if ($(window).width() < 577) {
-    $('#accordion').accordion({
-      active: 4
-    });
-  } else if ($(window).width() > 577) {
+  if ($(window).width() >= 560) {
     $('#accordion').accordion({
       active: 0
+    });
+  } else if ($(window).width() <= 559) {
+    $('#accordion').accordion({
+      active: 4
     });
   }
 
